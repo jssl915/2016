@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>标签组件</title>
+    <link rel="stylesheet" href="css/label.css" type="text/css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/self-label.js"></script>
+    <style>
+        body{
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .content{
+            margin: 100px auto;
+            width: 660px;
+            height: 300px;;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <table>
+        <tr>
+        <td>兴趣标签</td>
+        <td id="labelDiv"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td id="recommendDiv"></td>
+        </tr>
+    </table>
+</div>
+</body>
+<script>
+var obj = {
+    recommendId:'recommendDiv',
+    recommendLabel:['篮球篮球篮球','足球','看书','写字']
+}
+$('#labelDiv').labelEdit(obj);
+</script>
+</html>

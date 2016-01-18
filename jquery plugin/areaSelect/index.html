@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="../jquery-2.1.1.js"></script>
+<script src="areaData.js"></script> 
+<script src="areaSelect.js"></script> 
+<title>省市县选择</title>
+<style>
+ul,li{margin:0;padding:0;list-style:none}
+ul li{float:left;}
+.self-select{width:140px;margin-right:10px;}
+</style>
+</head>
+<body>
+<div style="margin:10px;">
+    <ul>
+        <li>区域选择：</li>
+        <li><div id="area">
+            <select id="provice" name="provice" class="self-select"></select><select id="city" name="city" class="self-select"></select><select id="district" name="district" class="self-select"></select>
+        </div></li>
+    </ul>
+</div>
+<div><button id="choose">提交</button></div>
+<br/>
+<div style="margin:10px;">
+    <ul>
+        <li>区域选择：</li>
+        <li><div id="area1">
+        <select id="provice1" name="provice1" class="self-select"></select><select id="city1" name="city1" class="self-select"></select><select id="district1" name="district1" class="self-select"></select>
+        </div></li>
+    </ul>
+</div>
+<br><br>
+取值
+<div id="areaName"></div>
+<script>
+$(function(){
+    var name = $.areaGetName('542337');
+   // $('#areaName').html('fff '+name.join(' '));
+	var data = {
+		aId:['provice','city','district'],
+        'addressCode':110105
+	}
+	$.areaSelect(data);
+	$('#choose').click(function(){
+		console.log('provice:'+$("#provice option:selected").text()+$('#provice').val());
+		console.log('city:'+$("#city option:selected").text()+$('#city').val());
+		console.log('district:'+$("#district option:selected").text()+$('#district').val());
+        console.log($.areaGetName($('#district').val()).join(' '));
+	});
+	var data1 = {
+		aId:['provice1','city1','district1']
+	}
+	$.areaSelect(data1);
+});
+</script>
+</body>
+</html>

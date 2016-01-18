@@ -1,0 +1,22 @@
+@charset "utf-8";/* CSS Document */
+*{margin:0;padding:0}
+body{background:#0d5391;font-famile:"宋体";}
+.menu-tree{width:176px;background:#0d5391;margin-top:10px;margin-left:20px;}
+.west-menu-content{position:relative;width:176px;margin-top:5px;}
+.west-menu-content ul{list-style:none}
+.west-menu-content ul .one-li{position:relative;float:left;}
+.one-li-div{position:relative;background:url(../images/mainbgs.png) no-repeat 0px -47px;width:176px;height:28px;cursor:pointer;}
+.one-left-title{line-height:28px;color:#065396;font-weight:600;font-size:14px;margin-left:24px;}
+.one-left-icon{position:absolute;top:11px;left:12px;background:url(../images/mainbgs.png) no-repeat 0px 0px;width:6px;height:6px;}
+.one-right-icon-add{position:absolute;top:10px;right:10px;background:url(../images/mainbgs.png) no-repeat -26px 0px;width:9px;height:9px;}
+.one-right-icon-minus{position:absolute;top:10px;right:10px;background:url(../images/mainbgs.png) no-repeat -17px 0px;width:9px;height:9px;}
+.two-ul{position:relative;}
+.tow-ul-background{position:absolute;top:0;left:0;width:100%;height:100%;background:#cdedff;filter:alpha(opacity=33);/* for IE8 and earlier */
+opacity:.33;/* for IE9 and other browsers */
+}
+.two-ul li{position:relative;cursor:pointer;color:#fff;}
+.two-ul .selected{background:#7FB859;}
+.two-ul li:hover{font-weight:600;}
+.two-left-icon{position:absolute;top:10px;left:20px;background:url(../images/mainbgs.png) no-repeat -35px 0px;width:6px;height:11px;}
+.two-left-title{line-height:28px;font-size:13px;margin-left:32px;}
+

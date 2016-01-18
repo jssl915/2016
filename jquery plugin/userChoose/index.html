@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="../jquery-2.1.1.js"></script>
+<script src="userChoose.js"></script> 
+<title>城市选择</title>
+<style>
+ul,li{margin:0;padding:0;list-style-type:none;}
+.content{width:800px;height:500px;border:1px solid grey;position:absolute;margin:auto;left:0;right:0;top:0;bottom:0;}
+.oneLi{margin:10px 0}
+.firstLetter{position:relative;margin:20px 0 0 24px;width:150px;height:30px;line-height:30px;color:#fff;background:#03C5C4;text-align:center;}
+.search-text{position:absolute;left:170px;width:500px;border:1px solid #95b8e7;border-radius:5px;font-size:14px;padding-left:5px;font-size:18px;height:25px;line-height:25px;}
+.search-text:focus{border:1px solid #95b8e7;box-shadow: 0 0 3px 0 #95b8e7;padding-left:5px;}
+.userDiv{width:800px;margin-left:24px;position:relative;background:#f7f7f7;}
+.letterDiv{position:absolute;left:0;top:0;color:#fff;font-size:25px;font-weight:600;background:#03C5C4;width:30px;height:30px;text-align:center;line-height:30px;}
+.twoUl{position:absolute;left:40px;top:0;width:700px;line-height:40px;color:#478c87;font-weight:600;background:#f7f7f7;}
+.twoUl li{position:relative;float:left;padding-left:5px;width:135px;height:40px;line-height:40px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+</style>
+<script src="jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+<div id="content" class="content"></div>
+<script>
+$(function(){
+	var data = {"A":[{"name":"abc/abc","id":"276"}],"S":[{"name":"super/超级管理员","id":"224"}],"W":[{"name":"ww/王五","id":"280"}],"Z":[{"name":"zs/张三","id":"278"}],"L":[{"name":"ls/李四","id":"279"}]};
+	var sUserRoleList = [{"roleId":1,"roleUserId":33,"userId":270},{"roleId":1,"roleUserId":34,"userId":280},{"roleId":1,"roleUserId":35,"userId":224}];
+	$('#content').userChoose(data,sUserRoleList);	
+})
+
+
+</script>
+
+</html>

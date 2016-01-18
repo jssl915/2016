@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/menuTree.css">
+<script src="../jquery-2.1.1.js"></script>
+<script src="js/menuTree.js"></script> 
+<title>菜单树</title>
+</head>
+<body>
+<div id="menuTree" class="menu-tree"></div>
+<script>
+var data = [{"children":[{"children":[{"expanded":false,"id":"3","pid":"1","text":"系统管理员管理"},{"expanded":false,"id":"6","pid":"1","text":"系统菜单管理"},{"expanded":false,"id":"4","pid":"1","text":"系统角色管理"},{"expanded":false,"id":"90","pid":"1","text":"系统参数管理"},{"expanded":false,"id":"60","pid":"1","text":"系统日志管理"}],"expanded":false,"id":"1","pid":"0","text":"系统管理"},{"children":[{"expanded":false,"id":"209","pid":"207","text":"按名称查询"},{"expanded":false,"id":"230","pid":"207","text":"按设备查询"}],"expanded":false,"id":"207","pid":"0","text":"视频管理"}],"expanded":true,"id":"0","text":"资源树"}];
+$(function(){
+	$('#menuTree').menuTree(data);
+});
+</script>
+</body>
+</html>

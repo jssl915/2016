@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>验证框架</title>
+    <link rel="shortcut icon" href="images/wh_ico.ico"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<div class="content">
+    <form id="form1">
+    <div class="title"><h4 class="title-text">验证框架</h4></div>
+    <div class="valid-wrap">
+        <div class="valid-table" style="width: 380px">
+            <div class="valid-left">手机号</div>
+            <div class="valid-right">
+                <input type="text" id="username" name="username" placeholder="请输入手机号码" class="valid-input" maxlength="11" >
+                <div class="error-msg"></div>
+            </div>
+            <div class="valid-left">登录名</div>
+            <div class="valid-right">
+                <input type="text" id="nickname" name="nickname" placeholder="请输入登录名" class="valid-input" maxlength="8" >
+                <div class="error-msg"></div>
+            </div>
+            <div class="valid-left">密码</div>
+            <div class="valid-right">
+                <input type="password" id="password" name="password" placeholder="请输入密码" class="valid-input" maxlength="18" >
+                <div class="error-msg"></div>
+            </div>
+            <div class="valid-left">确认密码</div>
+            <div class="valid-right">
+                <input type="password" id="confirmPassword" name="password" placeholder="请输入确认密码" class="valid-input" maxlength="18" >
+                <div class="error-msg"></div>
+            </div>
+            <div class="valid-left">个数</div>
+            <div class="valid-right">
+                <input type="text" id="num" name="num" placeholder="请输入个数" class="valid-input" maxlength="18" >
+                <div class="error-msg"></div>
+            </div>
+            <div class="valid-left">金额</div>
+            <div class="valid-right">
+                <input type="text" id="mount" name="mount" placeholder="请输入金额" class="valid-input" maxlength="10" >
+                <div class="error-msg"></div>
+            </div>
+            <div id="validBtn" class="valid-submit" style="margin-left: 100px;">提交</div>
+        </div>
+    </div>
+    </form>
+</div>
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/validate.js"></script>
+<script>
+$(function(){
+    var data = {
+        'username':{
+            'required':true,
+            'mobile':true
+        },
+        'nickname':{
+            'required':true,
+            'name':true
+        },
+        'password':{
+            'required':true,
+            'minLength':6,
+            'maxLength':10
+        },
+        'confirmPassword':{
+            'required':true,
+            'minLength':6,
+            'maxLength':10
+        },
+        'num':{
+            'required':true,
+            'integer':true
+        },
+        'mount':{
+            'required':true,
+            'mount':true
+        }
+    }
+    validate(data);
+    $('#validBtn').click(function(){
+        if(validateSubmit(data)){
+            alert(1);
+        }
+    });
+})
+</script>
+</html>

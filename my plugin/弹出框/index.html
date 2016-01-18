@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>弹出框组件</title>
+    <link rel="stylesheet" href="css/dialog-div.css" type="text/css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/self-dialog.js"></script>
+    <style>
+        body{
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .content{
+            margin: 100px auto;
+            width: 300px;
+            height: 300px;;
+        }
+        .btn{
+            background: #54b1e3;
+            width: 120px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background: #58d1e3;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div id="alertBtn" class="btn">alert框</div><br/>
+    <div id="confirmBtn" class="btn">confirm框</div>
+</div>
+</body>
+<script>
+    $('#alertBtn').click(function(){
+        $.dialogAlert({
+            title:"提示",
+            content:'不能为空？'
+        });
+    });
+    $('#confirmBtn').click(function(){
+        $.dialogConfirm({
+            title:"提示",
+            content:'真的要删除吗？',
+            onSubmit:function(){
+                alert('确定');
+            },
+            onCancel:function(){
+                //alert('取消');
+            }
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jquery-2.1.1.js"></script>
+<title>省市县选择</title>
+<style>
+ul,li{margin:0;padding:0;list-style:none}
+ul li{float:left;}
+.self-select{width:140px;margin-right:10px;}
+</style>
+</head>
+<body>
+<div style="margin:50px 0 0 100px;">
+    <ul>
+        <li>区域选择：</li>
+        <li><div id="area">
+            <select id="provice" name="provice" class="self-select">
+
+            </select>
+            <select id="city" name="city" class="self-select"></select>
+            <select id="district" name="district" class="self-select"></select>
+        </div></li>
+    </ul>
+</div>
+<div><button id="choose">提交</button></div>
+<script>
+var data1 = [
+    {id:'01',name:'湖北省'},
+    {id:'02',name:'湖南省'},
+    {id:'03',name:'浙江省'}
+]
+var data2 = {
+    '01':[{id:'0101',name:'武汉市'},{id:'0102',name:'黄石市'},{id:'0103',name:'宜昌市'},{id:'0104',name:'荆门市'}],
+    '02':[{id:'0201',name:'长沙市'},{id:'0202',name:'怀化市'}],
+    '03':[{id:'0301',name:'温州市'}]
+}
+var data3 = {
+    '0101':[{id:'010101',name:'武昌区'},{id:'010102',name:'江夏区'}],
+    '0102':[{id:'010101',name:'铁山县'},{id:'010102',name:'阳新县'}],
+    '0103':[{id:'010301',name:'兴山'}],
+    '0104':[{id:'010101',name:'沙扬县'}],
+    '0201':[{id:'020101',name:'天心区'},{id:'020102',name:'怀化区'}],
+    '0202':[{id:'020101',name:'洪江市'}],
+    '0301':[{id:'030101',name:'文成县'}]
+}
+$(function(){
+    $('#choose').click(function(){
+        console.log( $('#provice').val(),$("#provice option:selected").text());
+        console.log( $('#city').val(),$("#city option:selected").text());
+        console.log( $('#district').val(),$("#district option:selected").text());
+    });
+    linkSelect();
+})
+function linkSelect(){
+    var oProvice = $('#provice');
+    var oCity = $('#city');
+    var oDistrict = $('#district');
+
+    addProvice();//加载省
+
+    function addProvice(){
+        for(var i=0;i<data1.length;i++){
+            var d = data1[i];
+            oProvice.append('<option value="'+d.id+'">'+d.name+'</option>');
+        }
+        addCity();
+    }
+
+    function addCity(){
+        oCity.empty();
+        var proviceId = oProvice.val();//省id
+        var aCityArray = data2[proviceId];//得到市数组
+        for(var i=0;i<aCityArray.length;i++){
+            var d2 = aCityArray[i];
+            oCity.append('<option value="'+d2.id+'">'+d2.name+'</option>');
+        }
+        addDistrict();
+    }
+
+    function addDistrict(){
+        oDistrict.empty();
+        var cityId = oCity.val();//市id
+        var aDistrictArray = data3[cityId];//得到区县数组
+        for(var i=0;i<aDistrictArray.length;i++){
+            var d = aDistrictArray[i];
+            oDistrict.append('<option value="'+d.id+'">'+d.name+'</option>');
+        }
+    }
+
+    //绑定选择方法
+    oProvice.change(function(){
+       addCity();
+       addDistrict();
+    });
+    oCity.change(function(){
+        addDistrict();
+    })
+}
+
+
+</script>
+</body>
+</html>

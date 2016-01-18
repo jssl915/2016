@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jquery-2.1.1.js"></script>
+<title>省市县选择</title>
+<link href="easyui1.4.1/themes/default/easyui.css" rel="stylesheet" type="text/css" />
+<link href="easyui1.4.1/themes/icon.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="easyui1.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="easyui1.4.1/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="easyui1.4.1/easyui-lang-zh_CN.js"></script>
+<style>
+ul,li{margin:0;padding:0;list-style:none}
+ul li{float:left;}
+</style>
+</head>
+<body>
+<div style="margin:50px 0 0 100px;">
+    <ul>
+        <li>区域选择：</li>
+        <li><div id="area">
+            <select id="provice" name="provice"></select>
+            <select id="city" name="city"></select>
+            <select id="district" name="district"></select>
+        </div></li>
+    </ul>
+</div>
+<div><button id="choose">提交</button></div>
+<script>
+var data1 = [
+    {id:'01',text:'湖北省'},
+    {id:'02',text:'湖南省'},
+    {id:'03',text:'浙江省'}
+]
+var data2 = {
+    '01':[{id:'0101',text:'武汉市'},{id:'0102',text:'黄石市'},{id:'0103',text:'宜昌市'},{id:'0104',text:'荆门市'}],
+    '02':[{id:'0201',text:'长沙市'},{id:'0202',text:'怀化市'}],
+    '03':[{id:'0301',text:'温州市'}]
+}
+var data3 = {
+    '0101':[{id:'010101',text:'武昌区'},{id:'010102',text:'江夏区'}],
+    '0102':[{id:'010101',text:'铁山县'},{id:'010102',text:'阳新县'}],
+    '0103':[{id:'010301',text:'兴山'}],
+    '0104':[{id:'010101',text:'沙扬县'}],
+    '0201':[{id:'020101',text:'天心区'},{id:'020102',text:'怀化区'}],
+    '0202':[{id:'020101',text:'洪江市'}],
+    '0301':[{id:'030101',text:'文成县'}]
+}
+$(function(){
+    $('#choose').click(function(){
+        console.log($('#provice').combobox('getValues'));
+        console.log($('#city').combobox('getValues'));
+        console.log($('#district').combobox('getValues'));
+    });
+    linkSelect();
+})
+function linkSelect(){
+    $('#provice').combobox({
+        data:data1,
+        valueField: 'id',
+        textField: 'text',
+        required:true,
+        multiple:true,
+        width:150,
+        onSelect:function(){
+            chooseProvice();
+        },
+        onUnselect:function(){
+            chooseProvice();
+        }
+    });
+    $('#city').combobox({
+        valueField: 'id',
+        textField: 'text',
+        required:true,
+        multiple:true,
+        width:150,
+        onSelect:function(){
+            chooseCity();
+        },
+        onUnselect:function(){
+            chooseCity();
+        }
+    });
+    $('#district').combobox({
+        valueField: 'id',
+        textField: 'text',
+        required:true,
+        width:150
+    });
+    //选中省则修改市
+    function chooseProvice(){
+        var proviceIds = $('#provice').combobox('getValues');//省id
+        var aCityArray =[];//得到市数组
+        for(var i=0;i<proviceIds.length;i++){
+            aCityArray = aCityArray.concat(data2[proviceIds[i]]); //合并数组
+        }
+        $('#city').combobox('loadData',aCityArray);//重新加载下拉选项
+        //取消选中省的时候判断市选中的值，如果下拉选项中没有则删除选中的值
+        var aValues = $('#city').combobox('getValues');
+        var newValues = [];
+        for(var i=0;i<aValues.length;i++){
+            for(var j=0;j<aCityArray.length;j++) {
+                if (aValues[i]==aCityArray[j].id) {
+                    newValues.push(aValues[i]);
+                }
+            }
+        }
+        console.log(newValues);
+        //修改选中的值，如果下拉选项中没有则删除选中的值
+        $('#city').combobox('setValues',newValues);
+        chooseCity();
+    }
+    //选中市则修改区县
+    function chooseCity(){
+        var cityIds = $('#city').combobox('getValues');//省id
+        var aDistrictArray =[];//得到区数组
+        for(var i=0;i<cityIds.length;i++){
+            aDistrictArray = aDistrictArray.concat(data3[cityIds[i]]); //合并数组
+        }
+        //console.log(aDistrictArray);
+        $('#district').combobox('loadData',aDistrictArray);
+        var aValues = $('#district').combobox('getValues');
+        var newValues = [];
+        for(var i=0;i<aValues.length;i++){
+            for(var j=0;j<aDistrictArray.length;j++) {
+                if (aValues[i]==aDistrictArray[j].id) {
+                    newValues.push(aValues[i]);
+                }
+            }
+        }
+        //console.log(newValues);
+        //修改选中的值，如果下拉选项中没有则删除选中的值
+        $('#district').combobox('setValues',newValues);
+    }
+}
+
+</script>
+</body>
+</html>

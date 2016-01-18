@@ -1,0 +1,7 @@
+.menu_list{margin:20px auto;width:500px;}
+.menu_head{padding-left:20px;width:480px;height:30px;line-height:30px;font-size:14px;color:#525252;cursor:pointer;border:1px solid #e1e1e1;position:relative;font-weight:bold;background:#f1f1f1 url(../images/pro_left.png) center right no-repeat;margin:0;}
+.menu_list .current{background:#f1f1f1 url(../images/pro_down.png) center right no-repeat;}
+.menu_body{width:500px;height:auto;overflow:hidden;line-height:38px;border-left:1px solid #e1e1e1;backguound:#fff;border-right:1px solid #e1e1e1;}
+.menu_body a{display:block;width:500px;height:38px;line-height:38px;padding-left:38px;color:#777777;background:#fff;text-decoration:none;border-bottom:1px solid #e1e1e1;}
+.menu_body a:hover{text-decoration:none;}
+.check-right{margin-right: 10px;}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>回到顶部</title>
+    <style>
+       .to-top{
+           display: none;
+           position: fixed;
+           bottom: 100px;
+           right: 80px;
+           background: url(images/arrow-up.png);
+           width: 54px;
+           height:54px;
+       }
+       .to-top:hover{
+           background: url(images/arrow-up-hover.png);
+           cursor:pointer;
+       }
+    </style>
+</head>
+<body>
+<p id="back-to-top" class="to-top"></p>
+<div style="text-align:center">
+    测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>
+    测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>
+	测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>
+	测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>测试<br>
+</div>
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 100) {
+                $("#back-to-top").fadeIn(1000);
+            }else {
+                $("#back-to-top").fadeOut(1000);
+            }
+        });
+        $("#back-to-top").click(function () {
+            $('body,html').animate({scrollTop: 0}, 1000);
+            return false;
+        });
+    });
+</script>
+</html>

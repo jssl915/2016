@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="../jquery-2.1.1.js"></script>
+<script src="imgDrag.js"></script> 
+<title>城市选择</title>
+<style>
+#imgDiv{width:800px;margin:auto;position:absolute;left:0;right:0;top:0;bottom:0;}
+/*图片拖动组件样式*/
+.imgUl{position:relative; margin:10px auto;}
+.imgUl li{float:left; list-style:none; margin:10px; z-index:1;}
+.imgUl li:hover{cursor:move}
+.imgUl li img{width:100%;height:100%}
+.imgUl .active {border:1px dashed red;}
+/*图片拖动组件样式*/
+</style>
+</head>
+
+<body>
+<div id="imgDiv"></div>
+<script>
+var obj = {id:'imgDiv',	aImg:['images/1.jpg','images/2.jpg','images/3.jpg','images/4.jpg','images/5.jpg','images/6.jpg','images/7.jpg','images/8.jpg','images/9.jpg','images/10.jpg']};
+$(function(){
+	$.imgDrag(obj);
+});
+
+</script>
+
+</html>
