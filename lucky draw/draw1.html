@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>HTML5 手机摇一摇</title>
+<script type="text/javascript">
+var i = 0;
+var color = new Array('#fff', '#ff0', '#f00', '#000', '#00f', '#0ff');
+if(window.DeviceMotionEvent) {
+	var speed = 25;
+	var x = y = z = lastX = lastY = lastZ = 0;
+	window.addEventListener('devicemotion', function(){
+		var acceleration =event.accelerationIncludingGravity;
+		x = acceleration.x;
+		y = acceleration.y;
+		if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed) {			
+			i += parseInt(1);//自加变量
+			var txt = document.getElementById("txt");//获取text属性
+			txt.value = i;//将次数i赋值给text
+			document.body.style.backgroundColor = color[Math.round(Math.random()*10)%6];
+		}
+		lastX = x;
+		lastY = y;
+	}, false);
+}
+</script>
+</head>
+<body>
+<input type="text" name="txt" id="txt" value="0" />次
+HTML 5 手机摇一摇，在手机上运行的。
+</body>
+</html>
