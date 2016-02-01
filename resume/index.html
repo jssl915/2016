@@ -1,204 +1,58 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>我的个人网站</title>
-<link href="css/index.css" rel="stylesheet" type="text/css" />
-<link href="css/hover-min.css" rel="stylesheet" type="text/css" />
-<link href="css/dialog.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/page_util.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript" src="js/dialog.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Vertical navigation dots - fullPage.js</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/examples.css" />
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="js/examples.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                anchors: ['firstPage', 'secondPage', '3rdPage'],
+                sectionsColor: ['#8FB98B', '#DE564B', '#EAE1C0'],
+                slidesNavigation: true
+            });
+        });
+    </script>
 </head>
 <body>
-<div id="main">
-	<ul id="content">
-  		<li class="pageLi">
-        	<div id="page1" class="page">
-            	<div id="page1_img" style="position:absolute;left:50%;bottom:50%;margin-left:-100px;margin-bottom:-50px;width:200px;height:200px;">
-					<img src="images/page1_img1.jpg" class="pageImg hvr-pulse-grow">				
-                </div>
-                <div class="wrap">
-                	<div class="title hvr-wobble-horizontal">矫情嘟嘟2</div>
-                    <div class="content">                    
-                        <p>摩羯座</p>
-                        <p>自由职业者</p>
-                        <p>现居湖北武汉</p>
-                    </div>
-                </div>
-                <div id="web_titles" class="web_titles_main">
-					<div id="title_box" class="web_title_box" style="padding-top: 43px; padding-left: 0px;"></div>
-				</div>   
-                
-                  <div id="messageBoardContainer">
-                    <div id="messageBoard">
-                        <div class="wrap">
-                            <h2>
-                                <span>个人签名</span>
-                                <a href="javascript:if(g_fnQuirkyPopupClose){g_fnQuirkyPopupClose()};" title="关闭"></a>
-                            </h2>
-                            <div class="content">
-                            	<div> 夫君，世间有人谤我，欺我，辱我，笑我，轻我，贱我，骗我，如何处置乎？”</div><br/>
-                                <div> 答曰：“揍他，揍他，揍他，揍他，揍他，揍他，揍他，就是揍他，揍完之后，你且看他。 </div>
-                            </div>
-                        </div>
-                        <div class="bg"></div>
-                    </div>
-                </div>
-                
-                <a href="javascript:;" id="quirkyPopupShowBtn" style="display:none;"></a>        
+<div id="fullpage">
+    <div class="section " id="section0">
+        <div class="intro">
+            <h1>Sliders navigation dots</h1>
+            <p>Create a navigation for your landscape sliders</p>
+        </div>
+    </div>
+    <div class="section" id="section1">
+        <div class="slide" id="slide1" data-anchor="slide1">
+            <div class="intro">
+                <h1>Clickable</h1>
+                <p>
+                    You can even click on the navigation and jump directly to another section.
+                </p>
             </div>
-        </li>
-  		<li class="pageLi">
-        	<div id="page2" class="page">
-            	<div class="page2_title"><span class="hvr-wobble-horizontal" style="width:220px;cursor:pointer;">我的照片墙</span></div>
-				<div id="imgDiv" class="page2_content"></div>
-            </div>
-        </li>
-  		<li class="pageLi">
-        	<div id="page3" class="page">
-           		 <div class="page3_title">我的博客墙</div>
-            	 <div id="blogId"></div>
-                 <div id="drag" style="display:none">
-                <div class="title"><h2 id="dialogTitle">这是一个可以拖动的窗口</h2>
-                    <div>
-                        <a class="min" style="display:none" href="javascript:;" title="最小化"></a>
-                        <a class="max" href="javascript:;" title="最大化"></a>
-                        <a class="revert" href="javascript:;" title="还原"></a>
-                        <a class="close" href="javascript:;" title="关闭"></a>
-                    </div>
-                </div>
-                <div class="resizeL"></div>
-                <div class="resizeT"></div>
-                <div class="resizeR"></div>
-                <div class="resizeB"></div>
-                <div class="resizeLT"></div>
-                <div class="resizeTR"></div>
-                <div class="resizeBR"></div>
-                <div class="resizeLB"></div>
-                <div id="dialogContent" class="content"></div>
-            </div>
-            </div>     
-        </li>
-  		<li class="pageLi">
-        	<div id="page4" class="page">
-           		<div class="page4_title">小游戏</div>
-            	<div id="game_content">
-                    <img id="img_logo" src="logo.jpg">
-                    <input class="btn" id="start" value="开始" type="button">
-                    <div id="game_head">
-                        <ul id="score">
-                            <li>难度：1</li>
-                            <li>得分：0</li>
-                        </ul>
-                    </div>
-                    <div id ="game_bg">
-                        <div id="progress"><span></span></div>
-                    </div>
-                    <div id="game_over">
-                        <div id="btn_pos"><input id="reloadStart" class="btn" value="重新开始" type="button"></div>
-                    </div>
-                    <div id="man"></div>
-                </div>
-                <div id="shadow"></div>
-            </div>
-        </li>
-  		<!--<li class="pageLi">
-        	<div id="page5" class="page">
-            	
-            </div>
-        </li>
-  		<li class="pageLi">
-        	<div id="page6" class="page">
-            	
-            </div>
-        </li>
-  		<li class="pageLi">
-        	<div id="page7" class="page">
-            	
-            </div>
-        </li>
-  		<li class="pageLi">
-        	<div id="page8" class="page">
-            	
-            </div>
-        </li>
-  		<li class="pageLi">
-        	<div id="page9" class="page">
-            	
-            </div>
-        </li>
-  		<li class="pageLi">
-        	<div id="page10" class="page">
-            	
-            </div>
-        </li>-->
-    </ul>
+        </div>
+        <div class="slide" id="slide2" data-anchor="slide2">
+            <h1>Slide 2</h1>
+        </div>
+        <div class="slide" id="slide3" data-anchor="slide3">
+            <h1>Slide 3</h1>
+        </div>
+        <div class="slide" id="slide3" data-anchor="slide3">
+            <h1>Slide 4</h1>
+        </div>
+        <div class="slide" id="slide3" data-anchor="slide3">
+            <h1>Slide 5</h1>
+        </div>
+    </div>
+    <div class="section" id="section2">
+        <div class="intro">
+            <h1>Enjoy it</h1>
+        </div>
+    </div>
 </div>
-
-<div id="round">
-    <ul>
-        <li><span class="active"></span></li>
-        <li><span></span></li>
-        <li><span></span></li>
-        <li><span></span></li>
-  <!--      <li><span></span></li>
-		<li><span></span></li>
-        <li><span></span></li>
-        <li><span></span></li>
-        <li><span></span></li>
-        <li><span></span></li>-->
-     </ul>
-</div>
-
-<div id="toTop" class="toTop hvr-wobble-vertical"></div>
-
-
-<script>
-var page2Obj = {
-	id:'imgDiv',	
-	width:180,//图片宽
-	height:120,//图片高
-	rowNum:6,//每行个数,默认为4
-	aImg:['images/photo1.jpg','images/photo2.jpg','images/photo3.jpg','images/photo4.jpg','images/photo5.jpg',
-		  'images/photo6.jpg','images/photo7.jpg','images/photo8.jpg','images/photo9.jpg','images/photo10.jpg',
-		  'images/photo11.jpg','images/photo12.jpg','images/photo13.jpg','images/photo14.jpg','images/photo15.jpg',
-		  'images/photo16.jpg','images/photo17.jpg','images/photo18.jpg','images/photo19.jpg','images/photo20.jpg',
-		  'images/photo21.jpg','images/photo22.jpg','images/photo23.jpg','images/photo24.jpg']
-}
-var page3Obj = [
-'雁','Miss好呀','经营家庭','陌上花开','三首诗云','希望','怀念','你','小时候','关于外遇','关于生育'
-,'介意不介意？','恰当好处','嗯哼','心里话','怎么办','可是','偶尔心动','我要的','我说'
-,'有些理由','疲惫人生','如是，如实……','嫁人','死等or挑剔','妥协','异性朋友','炉中煤','胭脂扣','《幸福额度》'
-,'任性的你','童年的朋友','拐弯处的回头','假如','知足知不足','你是我的阳光','掩饰过失的猫','别拿爱情做比较','你为什么不来','流年，如斯','征兆','北方有佳人','只能边走边忘','一份疼爱','春暖花开','逃离','恋爱','不对等的等待','旧情人','最美的我'
-]
-window.onload = function(){
-	$Page.support();//检测浏览器是否支持HTML5
-	$Page.page.onLoad();//加载首页
-	window.onresize = function(){$Page.page.onLoad()};	
-}	
-
-function showDialog(num){
-	clearInterval($Page.page3.timer);	
-	var oDialog = document.getElementById('drag');
-	oDialog.style.display = 'block';	
-	var dialogTitle = document.getElementById('dialogTitle');
-	var oTitle = get.byClass("title", oDialog)[0];
-	dialogTitle.innerHTML = page3Obj[num];
-	ajax({
-		url: "blog/"+parseInt(num+1)+".txt",  //请求地址
-		type: "GET",                       //请求方式
-		dataType: "txt",
-		success:function (response, xml) {					
-			var dialogContent = document.getElementById('dialogContent');
-			dialogContent.innerHTML = response.replace(page3Obj[num],'&nbsp;&nbsp;&nbsp;&nbsp;').replace(/[\。]/g,'。<br/>&nbsp;&nbsp;&nbsp;&nbsp;');	
-		}
-	 });
-	var oSizeDrag = get.byClass('resizeBR')[0];
-	DialogDrag(oDialog, oTitle,oSizeDrag);	
-}
-
-
-</script>
 </body>
 </html>
