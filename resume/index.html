@@ -7,11 +7,14 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/jquery.extends.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
                 anchors: ['firstPage', 'secondPage', '3rdPage'],
-                sectionsColor: ['#8FB98B', '#DE564B', '#EAE1C0'],
+                //sectionsColor: ['#8FB98B', '#DE564B', '#EAE1C0'],
                 navigation: true,
                 slidesNavigation: false
             });
@@ -21,7 +24,9 @@
 <body>
 <div id="fullpage">
     <div class="section " id="section0">
-
+        <div id="clockDiv" class="clock-div">
+            <div id="clockTime" class="clock-time"></div>
+        </div>
     </div>
 
     <div class="section" id="section1">
@@ -46,5 +51,12 @@
 
     </div>
 </div>
+<script>
+$(function(){
+    loadClock();
+    $('#clockDiv').limitDrag();
+});
+
+</script>
 </body>
 </html>
