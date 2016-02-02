@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"  content="target-densitydpi=device-dpi,user-scalable=no" />
+<title>中文键盘</title>
+<link href="../static/js/tvui2.0/themes/tv_default.css" rel="stylesheet" type="text/css" />
+<link href="../static/js/tvui2.0/extend/softkey.css" rel="stylesheet" type="text/css" />
+<script src="../static/js/jquery-2.1.4.min.js"></script>
+<script src="../static/js/tvui2.0/jquery.tv.js"></script>
+<script src="../static/js/tvui2.0/jquery.tv.softkey.dict.js"></script>
+<script src="../static/js/tvui2.0/jquery.tv.softkey.js"></script>
+<style>
+body{background:#BFC9DA;font-family: "黑体";font-size: 27px;}
+.content{width:1280px;margin:0 auto;position:absolute}
+.lable1{position:absolute;top:10px;left:10px}
+#keyboard1{position:absolute;top:10px;left:120px;}
+.lable2{position:absolute;top:60px;left:10px}
+#keyboard2{position:absolute;top:60px;left:120px;}
+</style>
+</head>
+<body>
+<div id="content" class="content" data-role="tvPage">	
+	 <div class="lable1">文本框1:</div>
+     <div id="keyboard1" data-role="tvText" class="d_text1" data-css="d_text1,d_text2"></div>
+     <div class="lable2">文本框2:</div>
+     <div id="keyboard2" data-role="tvText" class="d_text1" data-css="d_text1,d_text2"></div>
+ <script type="text/javascript">
+ $(function(){
+	 $.tvPageInit('content');	
+	 $('#keyboard1').tvSetFocus();
+	 $('#keyboard1').tvOk(function(){$.softkey();})
+	 $('#keyboard2').tvOk(function(){$.softkey();})
+ });
+	
+</script>
+</div> 
+</body>
+</html>

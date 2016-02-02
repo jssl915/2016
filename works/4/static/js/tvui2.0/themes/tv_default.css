@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* 按钮样式 */
+.d_button1{width:150px; height:36px; background:url(images/tv_dcom.png)  no-repeat 0px 0px; text-align:center;height:36px; margin:0 5px; color:#fff;}
+.d_button2{width:150px; height:36px; background:url(images/tv_dcom.png) no-repeat -166px -1px; text-align:center;height:36px; margin:0 5px; color:#fff;cursor:pointer;}
+/* 文本框样式 */
+.d_text1{ background:url(images/tv_dcom.png) no-repeat 0px -45px; width:220px; height:32px;line-height:32px;border:0; color:#4f4f4f;padding-left:5px;}
+.d_text2{ background:url(images/tv_dcom.png) no-repeat -241px -46px; width:220px; height:32px;line-height:32px;border:0; color:#4f4f4f;padding-left:5px;cursor:pointer;}
+/* 单选框样式 */
+.d_radio1{background:url(images/tv_dcom.png) no-repeat -1px -140px;width:28px;height:28px;}
+.d_radio2{background:url(images/tv_dcom.png) no-repeat -40px -141px;width:28px;height:28px;cursor:pointer;}
+.d_radio3{background:url(images/tv_dcom.png) no-repeat -79px -142px;width:28px;height:28px;}
+.d_radio4{background:url(images/tv_dcom.png) no-repeat -120px -143px;width:28px;height:28px;cursor:pointer;}
+/* 复选框样式 */
+.d_checkbox1{background:url(images/tv_dcom.png) no-repeat -182px -144px;width:36px;height:36px;}
+.d_checkbox2{background:url(images/tv_dcom.png) no-repeat -238px -145px;width:36px;height:36px;cursor:pointer;}
+.d_checkbox3{background:url(images/tv_dcom.png) no-repeat -295px -145px;width:36px;height:36px;}
+.d_checkbox4{background:url(images/tv_dcom.png) no-repeat -351px -146px;width:36px;height:36px;cursor:pointer;}
+/* 下拉框样式 */
+.d_select1{overflow:hidden;width:250px;text-align:left;font-size:24px; background:url(images/tv_dcom.png) no-repeat 0px -89px;height:36px; color:#4f4f4f;line-height:36px;padding-left:5px;}
+.d_select2{overflow:hidden;width:250px;text-align:left;font-size:24px; background:url(images/tv_dcom.png) no-repeat -263px -90px;height:36px; color:#4f4f4f;line-height:36px;padding-left:5px;cursor:pointer;}
+
+/* 下拉框样式 */
+.option_css{text-align:center;border-bottom:solid 1px #000000;background-color:#F6F8F7;;}
+.option_css2{text-align:center;background-color:#F6F8F7;}
+.option_focus_css{text-align:center;border-bottom:solid 1px #000000;background-color:yellow; cursor:pointer;}
+.option_focus_css2{text-align:center;background-color:yellow; cursor:pointer;}
+ 
+/* 下拉框选项样式 */
+.tv_select_board{position:absolute;background-color: #F6F8F7;text-align: center;font-family: '宋体';font-size: 24px;}
+.tv_select_span1{position:absolute;border-left: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;}
+.tv_select_span2{position:absolute;background:#FFCC33;border-left: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;border-top: 1px solid #000000;;cursor:pointer;}
+
+/* 密码键盘样式 */
+.tv_pass_keyboard{background: url(images/tv_password.png) no-repeat -414px 0px;height: 189px;width: 208px;position:absolute;}
+.tv_pass_keyboard ul{list-style:none;} 
+.tv_pass_keyBoardName{position:absolute;left:46px;top:3px;color:#FFFFFF;font-size:22px;font-family: '黑体';}
+
+.pass-num-0{background: url(images/tv_password.png) no-repeat 0px 0px;width:44px; height:44px;position:absolute;}
+.pass-num-1{background: url(images/tv_password.png) no-repeat -103px 0px;width:44px; height:44px;position:absolute;}
+.pass-num-2{background: url(images/tv_password.png) no-repeat -212px 0px;width:44px; height:44px;position:absolute;}
+.pass-num-3{background: url(images/tv_password.png) no-repeat -315px 0px;width:44px; height:44px;position:absolute;}
+.pass-num-4{background: url(images/tv_password.png) no-repeat 0px -52px;width:44px; height:44px;position:absolute;}
+.pass-num-5{background: url(images/tv_password.png) no-repeat -104px -50px;width:44px; height:44px;position:absolute;}
+.pass-num-6{background: url(images/tv_password.png) no-repeat -212px -51px;width:44px; height:44px;position:absolute;}
+.pass-num-7{background: url(images/tv_password.png) no-repeat -316px -53px;width:44px; height:44px;position:absolute;}
+.pass-num-8{background: url(images/tv_password.png) no-repeat 0px -105px;width:44px; height:44px;position:absolute;}
+.pass-num-9{background: url(images/tv_password.png) no-repeat -103px -103px;width:44px; height:44px;position:absolute;}
+.pass-num-del{background: url(images/tv_password.png) no-repeat -212px -104px;width:44px; height:44px;position:absolute;}
+.pass-num-close{background: url(images/tv_password.png) no-repeat -319px -106px;width:44px; height:44px;position:absolute;}
+
+.pass-num-0-focus{background: url(images/tv_password.png) no-repeat -50px 0px;width:44px; height:44px;position:absolute;cursor:pointer;}
+.pass-num-1-focus{background: url(images/tv_password.png) no-repeat -156px 0px;width:44px; height:44px;position:absolute;cursor:pointer;}
+.pass-num-2-focus{background: url(images/tv_password.png) no-repeat -265px 0px;width:44px; height:44px;position:absolute;cursor:pointer;}
+.pass-num-3-focus{background: url(images/tv_password.png) no-repeat -367px 0px;width:44px; height:44px;position:absolute;cursor:pointer;}
+.pass-num-4-focus{background: url(images/tv_password.png) no-repeat -50px -50px;width:44px; height:44px;position:absolute;cursor:pointer;}
+.pass-num-5-focus{background: url(images/tv_password.png) no-repeat -157px -50px;width:44px; height:44px;position:absolute;cursor:pointer;}
+.pass-num-6-focus{background: url(images/tv_password.png) no-repeat -266px -51px;width:44px; height:44px;position:absolute;cursor:pointer;}
+.pass-num-7-focus{background: url(images/tv_password.png) no-repeat -367px -52px;width:44px; height:44px;position:absolute;cursor:pointer;}
+.pass-num-8-focus{background: url(images/tv_password.png) no-repeat -49px -104px;width:44px; height:44px;position:absolute;cursor:pointer;}
+.pass-num-9-focus{background: url(images/tv_password.png) no-repeat -159px -104px;width:44px; height:44px;position:absolute;cursor:pointer;}
+.pass-num-del-focus{background: url(images/tv_password.png) no-repeat -267px -105px;width:44px; height:44px;position:absolute;cursor:pointer;}
+.pass-num-close-focus{background: url(images/tv_password.png) no-repeat -368px -105px;width:44px; height:44px;position:absolute;cursor:pointer;}
+
+/*alert框样式 */
+.alert_fade{background:#000;position:fixed;left:0;top:0;width:100%;height:100%;filter:alpha(opacity=70);opacity:.70;}
+.alert_div{background:none repeat scroll 0 0 #eee;box-shadow:0 0 6px rgba(0,0,0,0.5);padding:5px;width:400px;height:200px;padding:10px;position:fixed;left:0;top:0;right:0;bottom:0;margin:auto;font-family:'宋体';color:#000000;z-index: 999;}
+.wrapOut{background:none repeat scroll 0 0 #fafafa;border:1px solid #ccc;height:100%;border:1px solid #BBBBBB;position:relative}
+.wrapBar{background:none repeat scroll 0 0 #f7f7f7;border-bottom:4px solid #eee;border-top:3px solid #f9f9f9;width:100%;height:12%;margin-top:2px;text-align:center;}
+.wrap_title{background:none repeat scroll 0 0 #f3f3f3;border-bottom:5px solid #f1f1f1;border-top:4px solid #f5f5f5;font-size:20px;}
+.wrapBody{background:none repeat scroll 0 0 white;border-top:1px solid #ddd;display:inline-block;padding-top:20px;font-size:27px;text-indent:2em;width:100%;}
+.wrapOut .css1{border-radius:5px;color:#fff;font-weight:bold;line-height:38px;overflow:hidden;position:relative;text-align:center;text-shadow:1px 1px 1px #333;width:35%;background: -webkit-linear-gradient(top,#656565,#4c4c4c);background: -moz-linear-gradient(top,#656565,#4a4a4a);background: linear-gradient(top,#656565,#4a4a4a);;border:1px solid #333;box-shadow:0 1px 2px #8b8b8b inset,0 -1px 0 #3d3d3d inset,0 -2px 3px #8b8b8b inset;}
+.wrapOut .css2{border-radius:5px;color:#fff;font-weight:bold;line-height:38px;;overflow:hidden;position:relative;text-align:center;text-shadow:1px 1px 1px #333;width:35%;background:-webkit-linear-gradient(top,#d53939,#b92929);background: -moz-linear-gradient(top,#d53939,#b92929);background: linear-gradient(top,#d53939,#b92929);border:1px solid #b42323;box-shadow:0 1px 2px #e99494 inset,0 -1px 0 #954b4b inset,0 -2px 3px #e99494 inset;cursor:pointer;}
+
+.info_div{font-family:宋体;font-size:25px;background: #055781;filter:alpha(opacity=93);opacity:.93;width:900px;height: 350px;border-radius: 20px;border:2px solid white;z-index: 999;position:fixed;left:0;top:0;right:0;bottom:0;margin:auto;}
+.info_div .info_content{width:94%;height:100%;position:absolute;left:0;top:0;right:0;bottom:0;margin:auto;}
+.info_div .info_title{width:100%;text-align: center;height: 50px;line-height: 50px;color:#fced00;}
+.info_div .info_del1{background: url(images/close01.png) no-repeat;width:25px;height:25px;}
+.info_div .info_del2{background: url(images/close02.png) no-repeat;width:25px;height:25px;cursor:pointer;}
+.info_div .info_line{border-bottom:2px dashed #ffffff;text-align: center;}
+.info_div .text_content{height:240px;text-indent:2em;overflow:hidden;margin-top: 10px;position: relative;}
+.info_div .info_left1{background:url(images/last2.png); width:36px; height:30px;}
+.info_div .info_left2{background:url(images/last3.png); width:36px; height:30px;cursor:pointer;}
+.info_div .info_right1{background:url(images/next2.png); width:36px; height:30px;}
+.info_div .info_right2{background:url(images/next3.png); width:36px; height:30px;cursor:pointer;}
+.info_div .info_text1{background:url(images/text_bj.png) repeat-x; width:50px; height:30px; border-radius:5px; float:left; margin:0 8px 0 18px;text-align:center;color:#424a5d;}
+.info_div .info_text2{background:url(images/text_bj.png) repeat-x; width:50px; height:30px; border-radius:5px; float:left; margin:0 8px 0 18px;text-align:center;color:#424a5d;box-shadow:0 0 0 4px #fced00 inset, 0 0 10px #06c;cursor:pointer;}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>热门推荐</title>
+<link href="static/js/tvui2.0/themes/tv_default.css" rel="stylesheet" type="text/css" />
+<link href="static/js/tvui2.0/themes/tv_default.css" rel="stylesheet" type="text/css" />
+<script src="static/js/jquery-2.1.4.min.js"></script>
+<script src="static/js/data.js"></script>
+<script src="static/js/tvui2.0/jquery.tv.js"></script>
+<link href="static/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="hot" class="index" data-role="tvPage">
+	<div class="myapp_title">
+        <div style="position:absolute;left:60px;font-size:24px;height:40px;line-height:40px;">
+        <span><img src="static/images/back_01.png" style="position:absolute;top:5px;width:31px;height:31px;"></span> 
+        <span style="margin-left:40px">返回首页</span>
+        <span style="margin-left:30px;">热门推荐</span>
+        </div>
+       
+	</div>
+  	<div class="myapp_center">
+        <div id="app_left_arrow" class="app_left_arrow"></div>
+   		<div id="app_prod" class="app_prod"></div>
+        <div id="app_right_arrow" class="app_right_arrow"></div>
+    </div>
+ 	<div id="totalPage" class="totalPage"></div>
+    
+    <div id="foot" class="foot">
+        <ul>
+            <li id="ft_menu1" class="css1" data-role="tvButton" data-css="css1,css2">
+                <div class="home_icon"></div>
+                <div class="menu_name">首页</div>
+            </li>
+            <li id="ft_menu2" data-role="tvButton" data-css="css1,css2">
+                <div class="game_icon"></div>
+                <div class="menu_name">游戏</div>		
+            </li>
+            <li id="ft_menu3" data-role="tvButton" data-css="css1,css2">
+                <div class="apply_icon"></div>
+                <div class="menu_name">应用</div>		
+            </li>
+            <li id="ft_menu4" data-role="tvButton" data-css="css1,css2">
+                <div class="search_icon"></div>
+                <div class="menu_name">搜索</div>		
+            </li>
+            <li id="ft_menu5" data-role="tvButton" data-css="css1,css2">
+                <div class="my_apply_icon" style="left:25px;"></div>
+                <div class="menu_name" style="left:65px;">我的应用</div>		
+            </li>
+        </ul>
+	</div>
+<script>
+function init(){
+	loadApp();
+	$.tvPageInit('hot');	
+    $('#prod1').tvSetFocus();
+	$('#ft_menu1').tvOk(function(){
+		$.changePage('index.html');
+	});
+	$('#ft_menu4').tvOk(function(){
+		$.changePage('search.html');
+	});
+	$('#ft_menu5').tvOk(function(){
+		$.changePage('myapply.html');
+	});
+}
+
+function loadApp(){
+	var appListJson = myappData;
+	var appList = appListJson.dataList;
+	var appArray = [];
+	appArray.push('<ul>');
+	for(var i=0;i<appList.length;i++){
+		var a = appList[i];	
+		appArray.push('<li id="prod'+(i+1)+'" class="css1" data-role="tvButton" data-css="css1,css2"><img src="${imageHost}'+a.pic1+'" class="cd_img"/><div class="cd_name">'+a.prodName+'</div>');
+		appArray.push('<div class="star"><ul><li class="css02"></li><li class="css02"></li><li class="css02"></li><li class="css02"></li><li class="css01"></li></ul></div></li>');
+		if(i%4==3&&i!=appList.length-1){
+			appArray.push('</ul><ul>');
+		}
+	}
+	appArray.push('</ul>');
+	$('#app_prod').html(appArray.join(''));
+	$('#totalPage').html(appListJson.currentPage+'&nbsp;&nbsp;/&nbsp;&nbsp;'+appListJson.totalPage+'&nbsp;&nbsp;共 &nbsp;'+appListJson.total+'&nbsp;个');
+	if(appListJson.currentPage==1){$('#app_left_arrow').hide();}else{$('#app_left_arrow').show()}
+	if(appListJson.currentPage==appListJson.totalPage){$('#app_right_arrow').hide();}else{$('#app_right_arrow').show()}
+}
+</script>
+</div>
+<script>
+$(function(){init();});
+</script>
+</body>
+</html>

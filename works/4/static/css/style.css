@@ -1,0 +1,111 @@
+@CHARSET "UTF-8";
+/**公共**/
+body{margin:0;padding:0;font-family:微软雅黑;color:#fff;}
+ul,li{margin:0;padding:0;list-style:none}
+/**公共**/
+/**首页**/
+.index{position:relative;background:url(../images/bj.jpg) no-repeat;width:1280px;height:720px;}
+.top{position:absolute;top:40px;left:50px;background:url(../images/top_log.png) no-repeat;width:258px;height:35px;}
+.content{position:relative;width:1280px;height:600px;padding-top:60px;}
+.center_up{position:relative;padding:60px 50px 20px;width:1180px;}
+.cu_left{}
+.cu_left_img{width:170px;height:346px;}
+.cu_center{position:absolute;top:62px;left:264px;width:652px;height:346px;overflow:hidden;}
+.cu_center_img{width:652px;height:346px;background-size:652px 346px;}
+.changeUl{position:absolute;width:2608px;height:346px;left:0;}
+.changeUl li{position:relative;float:left;}
+.changeUl .img_back{position:absolute;bottom:5px;width:652px;height:40px;line-height:40px;background:#000;border-bottom-left-radius:5px;border-bottom-right-radius:5px;filter:alpha(opacity=40);opacity:.4;}
+.changeUl .img_desc{position:absolute;bottom:5px;width:652px;height:40px;line-height:40px;padding-left:20px;font-size:20px;}
+.ad_num{right:20px;position:absolute;bottom:10px;}
+.ad_num .css1{background:#152A17;width:16px;height:16px;border-radius:8px;float:left;margin-right:10px;}
+.ad_num .css2{background:#05b2f2;width:16px;height:16px;border-radius:8px;float:left;margin-right:10px;}
+.curt{position:absolute;top:60px;right:60px;}
+.curtfocus{position:absolute;top:60px;right:60px;cursor:pointer;-webkit-transform:scale(1.15);-webkit-transition:all .3s ease-in-out;-moz-transform:scale(1.15);-moz-transition:all .3s ease-in-out;}
+.curtfocus .curt_img{border-radius:4px;box-shadow: 0 0 1px 3px #41cbda inset, 0 0 10px 2px #41cbda;}
+.curt_img{width:256px;height:160px}
+.curd{position:absolute;top:250px;right:60px;}
+.curdfocus{position:absolute;top:250px;right:60px;cursor:pointer;-webkit-transform:scale(1.15);-webkit-transition:all .3s ease-in-out;-moz-transform:scale(1.15);-moz-transition:all .3s ease-in-out;}
+.curdfocus .curd_img{border-radius:4px;box-shadow: 0 0 1px 3px #41cbda inset, 0 0 10px 2px #41cbda;}
+.curd_img{width:256px;height:160px;}
+.center_down{position:absolute;bottom:0;padding:60px 50px 40px;width:1220px;height:120px;}
+.center_down ul .css1{position:relative;width:264px;height:117px;background:url(../images/li_bg.png);float:left;margin-right:38px;}
+.center_down ul .css2{position:relative;cursor:pointer;width:264px;height:117px;background:url(../images/li_bg.png);float:left;margin-right:38px;border-radius:5px;box-shadow: 0 0 1px 3px #41cbda inset, 0 0 10px 2px #41cbda;}
+.cd_download{position:absolute;top:0;right:0;width:73px;width:72px;}
+.cd_img{position:absolute;top:15px;left:10px;width:85px;height:85px;}
+.cd_name{font-size:25px;height:35px;left:120px;line-height:35px;overflow:hidden;position:absolute;top:20px;width: 130px;}
+.star{position:absolute;top:75px;left:120px;}
+.star ul li{width:22px;height:22px;float:left;}
+.star ul .css01{background:url(../images/star01.png);}
+.star ul .css02{background:url(../images/star02.png);}
+.foot{position:absolute;bottom:0;width:1280px;height:60px;background:url(../images/foot_bg.png);}
+.foot ul{margin:0 60px;width:1140px;height:60px;}
+.foot ul li{position:relative;width:228px;height:60px;float:left;}
+.foot ul .css1{}
+.foot ul .css2{background:#05b2f2;cursor:pointer;}
+.foot .home_icon{position:absolute;left:60px;top:15px;background:url(../images/home_icon.png);width:35px;height:34px;}
+.foot .game_icon{position:absolute;left:60px;top:15px;background:url(../images/game_icon.png);width:35px;height:34px;}
+.foot .apply_icon{position:absolute;left:60px;top:15px;background:url(../images/apply_icon.png);width:35px;height:34px;}
+.foot .search_icon{position:absolute;left:60px;top:15px;background:url(../images/search_icon.png);width:35px;height:34px;}
+.foot .my_apply_icon{position:absolute;left:60px;top:15px;background:url(../images/my_apply_icon.png);width:35px;height:34px;}
+.foot .menu_name{position:absolute;left:100px;height:60px;line-height:60px;font-size:30px;}
+/**首页**/
+
+
+/**我的应用**/
+.myapp_title{position:absolute;top:40px;width:1280px;font-size:20px;text-align:center;}
+.ma_download01{position:absolute;top:0;left:60px;width:138px;height:41px;line-height:41px;}
+.ma_download02{position:absolute;top:0;left:60px;cursor:pointer;background:url(../images/myapp02.png);width:138px;height:41px;line-height:41px;}
+.ma_favorite01{position:absolute;top:0;left:198px;width:138px;height:41px;line-height:41px;}
+.ma_favorite02{position:absolute;top:0;left:198px;cursor:pointer;background:url(../images/myapp02.png);width:138px;height:41px;line-height:41px;}
+.ma_xz{position:absolute;top:0;right:60px;border-radius:5px;background:url(../images/myapp01.png);width:162px;height:44px;line-height:41px;}
+.ma_xzfocus{position:absolute;top:0;right:60px;cursor:pointer;border-radius:5px;background:url(../images/myapp01.png);width:162px;height:44px;line-height:41px;box-shadow: 0 0 1px 3px #41cbda inset, 0 0 10px 2px #41cbda;}
+.ma_xzimg{position:absolute;top:12px;left:45px;background:url(../images/myxz.png);background-size:16px 20px;width:16px;height:20px;}
+.ma_xzname{margin-left:15px;}
+.myapp_center{position:absolute;width:1280px;top:80px;}
+.app_left_arrow{position:absolute;top:218px;left:10px;background:url(../images/left_arrow.png);width:26px;height:96px;}
+.app_right_arrow{position:absolute;top:218px;right:10px;background:url(../images/right_arrow.png);width:26px;height:96px;}
+.app_prod{width:1200px;margin:30px 40px;height:360px;}
+.myapp_center ul .css1{position:relative;width:264px;height:117px;background:url(../images/li_bg.png);float:left;margin:20px 18px;z-index:98;}
+.myapp_center ul .css2{position:relative;width:264px;height:117px;cursor:pointer;background:url(../images/li_bg.png);float:left;margin:20px 18px;border-radius:5px;box-shadow: 0 0 1px 3px #41cbda inset, 0 0 10px 2px #41cbda;}
+.myapp_center ul .css3{position:relative;width:264px;height:117px;background:url(../images/li_bg02.png);float:left;margin:20px 18px;z-index:99}
+.myapp_center ul .css4{position:relative;width:264px;height:117px;cursor:pointer;background:url(../images/li_bg02.png);float:left;margin:20px 18px;border-radius:5px;z-index:99}
+.hide01{position:absolute;left:0;right:0;width:264px;height:117px;border-radius:5px;background:rgba(0,0,0,0.7) none repeat scroll !important; /*实现FF背景透明，文字不透明*/background:#000; filter:Alpha(opacity=70);/*实现IE背景透明*/z-index:99;}
+.hidehs01{position:absolute;left:110px;top:25px;background:url(../images/hidehs01.png);width:49px;height:60px;z-index:101}
+.hidehs02{position:absolute;left:100px;top:14px;cursor:pointer;background:url(../images/hidehs02.png);background-size:69px 88px;width:69px;height:88px;z-index:101}
+.totalPage{position:absolute;bottom:100px;right:60px;width:200px;text-align:right;}
+/**我的应用**/
+
+
+/**搜索**/
+.search-top{position:relative;width:1280px;height:380px;}
+.search-title{position:absolute;top:40px;left:40px;width:1200px;height:200px;}
+.search_icon{position:absolute;top:6px;left:0;background:url(../images/search_icon02.png);width:32px;height:32px;}
+.search_title{position:absolute;top:0;left:60px;font-size:30px;}
+.search_content{position:absolute;top:50px;left:60px;font-size:22px;}
+.search_down{position:absolute;left:60px;top:180px;width:1220px;height:120px;}
+.search_down ul .css1{position:relative;width:264px;height:117px;background:url(../images/li_bg.png);float:left;margin-right:30px;}
+.search_down ul .css2{position:relative;cursor:pointer;width:264px;height:117px;background:url(../images/li_bg.png);float:left;margin-right:30px;border-radius:5px;box-shadow: 0 0 1px 3px #41cbda inset, 0 0 10px 2px #41cbda;}
+.search_left_arrow{position:absolute;top:190px;left:10px;background:url(../images/left_arrow.png);width:26px;height:96px;display:none}
+.search_right_arrow{position:absolute;top:190px;right:10px;background:url(../images/right_arrow.png);width:26px;height:96px;display:none}
+.cd_download{position:absolute;top:0;right:0;width:73px;width:72px;}
+.cd_img{position:absolute;top:15px;left:10px;width:85px;height:85px;}
+.cd_name{font-size:25px;height:35px;left:120px;line-height:35px;overflow:hidden;position:absolute;top:20px;width: 130px;}
+.star{position:absolute;top:75px;left:120px;}
+.star ul li{width:22px;height:22px;float:left;}
+.star ul .css01{background:url(../images/star01.png);}
+.star ul .css02{background:url(../images/star02.png);}
+#searchPage{position:absolute;bottom:25px;right:75px;width:200px;text-align:right;}
+
+.search-key{border-radius:5px;position:absolute;left:63px;bottom:100px;width:1150px;height:226px;}
+.search-key-filter{border-radius:5px;position:absolute;left:63px;bottom:100px;width:1150px;height:226px;background:#225F9E;background:rgba(255,255,255,0.1) none repeat scroll !important; /*实现FF背景透明，文字不透明*/background:#ffffff; filter:Alpha(opacity=10);/*实现IE背景透明*/ }
+.search-text{position:absolute;left:9px;top:7px;background:url(../images/search_line.png);width:600px;height:52px;border-radius:5px;}
+.search-text span{position:absolute;top:6px;left:10px;font-size:24px;}
+.search-text-right{position:absolute;top:31px;right:15px;font-size:20px}
+.search-keyboard{position:absolute;width:1150px;top:60px;left:3px;font-size:24px;}
+.search-keyboard .licss1{float:left;background:url(../images/search_li.png);width:80px;height:47px;line-height:47px;margin:4px;border-radius:5px;text-align:center;}
+.search-keyboard .licss2{float:left;background:url(../images/search_li.png);cursor:pointer;width:80px;height:47px;line-height:47px;margin:4px;border-radius:5px;text-align:center;box-shadow: 0 0 1px 3px #41cbda inset, 0 0 10px 2px #41cbda;}
+.search-keyboard .search-del{position:relative;float:left;background:url(../images/search_li02.png);width:169px;height:47px;line-height:47px;margin:4px;border-radius:5px;text-align:center;}
+.search-keyboard .search-del-hover{position:relative;float:left;cursor:pointer;background:url(../images/search_li02.png);width:169px;height:47px;line-height:47px;margin:4px;border-radius:5px;text-align:center;box-shadow: 0 0 1px 3px #41cbda inset, 0 0 10px 2px #41cbda;}
+.search-keyboard .search-del-icon{position:absolute;left:35px;top:15px;background:url(../images/search_del.png);width:35px;height:21px}
+.search-keyboard .search-del-name{position:absolute;left:80px;}
+/**搜索**/

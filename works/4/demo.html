@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"  content="target-densitydpi=device-dpi,user-scalable=no" />
+<title>index</title>
+<link href="static/js/tvui2.0/themes/tv_default.css" rel="stylesheet" type="text/css" />
+<link href="static/js/tvui2.0/extend/softkey.css" rel="stylesheet" type="text/css" />
+<script src="static/js/jquery-2.1.4.min.js"></script>
+<script src="static/js/tvui2.0/jquery.tv.js"></script>
+<script src="static/js/tvui2.0/jquery.tv.softkey.dict.js"></script>
+<script src="static/js/tvui2.0/jquery.tv.softkey.js"></script>
+<style>
+body{background:#BFC9DA;font-family: "黑体";font-size: 27px;}
+.content{width:1280px;margin:0 auto; }
+.title{text-align:center;margin:40px auto;font-size:30px;color:#990033}
+.c_button{position:relative;margin-left:350px;}
+.lable_2{position:absolute;left:-200px;top:0;color:#0000FF}
+.lable_3{position:absolute;left:-200px;top:60px;color:#0000FF}
+.lable_4{position:absolute;left:-200px;top:120px;color:#0000FF}
+.lable_5{position:absolute;left:-200px;top:180px;color:#0000FF}
+.lable_6{position:absolute;left:-200px;top:240px;color:#0000FF}
+.lable_7{position:absolute;left:40px;top:237px;}
+.lable_8{position:absolute;left:180px;top:237px;}
+.lable_9{position:absolute;left:320px;top:237px;}
+.lable_10{position:absolute;left:460px;top:237px;}
+.lable_11{position:absolute;left:-200px;top:300px;;color:#0000FF}
+.lable_12{position:absolute;left:40px;top:300px;}
+.lable_13{position:absolute;left:180px;top:300px;}
+.lable_14{position:absolute;left:320px;top:300px;}
+.lable_15{position:absolute;left:460px;top:300px;}
+/**位置样式*/
+#tv_1{position:absolute;left:0;top:0;}
+#tv_2{position:absolute;left:200px;top:0px;}
+#tv_31{position:absolute;left:400px;top:0px;}
+#tv_3{position:absolute;left:0px;top:60px;}
+#tv_4{position:absolute;left:300px;top:60px;}
+#tv_5{position:absolute;left:0px;top:120px;}
+#tv_6{position:absolute;left:250px;top:120px;}
+#tv_7{position:absolute;left:0;top:180px;}
+#tv_8{position:absolute;left:250px;top:180px;}
+#tv_9{position:absolute;left:0;top:240px;}
+#tv_10{position:absolute;left:140px;top:240px;}
+#tv_11{position:absolute;left:280px;top:240px;}
+#tv_12{position:absolute;left:420px;top:240px;}
+#tv_13{position:absolute;left:0px;top:300px;}
+#tv_14{position:absolute;left:140px;top:300px;}
+#tv_15{position:absolute;left:280px;top:300px;}
+#tv_16{position:absolute;left:420px;top:300px;}
+#tv_17{position:absolute;left:560px;top:300px;}
+#tv_18{position:absolute;left:750px;top:300px;}
+
+.lable1_6{position:absolute;left:-200px;top:360px;color:#0000FF}
+.lable1_7{position:absolute;left:40px;top:360px;}
+.lable1_8{position:absolute;left:180px;top:360px;}
+.lable1_9{position:absolute;left:320px;top:360px;}
+.lable1_10{position:absolute;left:460px;top:360px;}
+#tv1_9{position:absolute;left:0;top:360px;}
+#tv1_10{position:absolute;left:140px;top:360px;}
+#tv1_11{position:absolute;left:280px;top:360px;}
+#tv1_12{position:absolute;left:420px;top:360px;}
+</style>
+</head>
+<body>
+<div id="content" class="content" data-role="tvPage">
+	<div class="title">组件</div>
+    <div class="c_button">      
+        <div class="lable_2">按钮:</div>
+        <div id="tv_1" data-role="tvButton" class="d_button1" data-css="d_button1,d_button2">按钮1</div>
+        <div id="tv_2" data-role="tvButton" class="d_button1" data-css="d_button1,d_button2">按钮2</div>
+        <div id="tv_31" data-role="tvButton" class="d_button1" data-css="d_button1,d_button2">按钮3</div>
+         <div class="lable_3">下拉框:</div>
+        <div id="tv_3" data-role="tvSelect" class="d_select1" data-css="d_select1,d_select2" data-length="4"></div>
+        <div id="tv_4" data-role="tvSelect" class="d_select1" data-css="d_select1,d_select2"></div>
+        <div class="lable_4">密码框:</div>
+        <div id="tv_5" data-role="tvPassword" class="d_text1" data-css="d_text1,d_text2"></div>
+        <div id="tv_6" data-role="tvPassword" class="d_text1" data-css="d_text1,d_text2"></div>
+        
+        <div class="lable_5">文本框:</div>
+        <div id="tv_7" data-role="tvText" class="d_text1" data-css="d_text1,d_text2"></div>
+        <div id="tv_8" data-role="tvText" class="d_text1" data-css="d_text1,d_text2"></div> 
+        
+        <div class="lable_6">单选框:</div>
+        <div id="tv_9"  data-role="tvRadio" data-name='color' data-value='red' class="d_radio1" data-css="d_radio1,d_radio2,d_radio3,d_radio4"></div><div class="lable_7">红色</div>  
+        <div id="tv_10" data-role="tvRadio" data-name='color' data-value='yellow' class="d_radio1" data-css="d_radio1,d_radio2,d_radio3,d_radio4"></div><div class="lable_8">黄色</div>
+        <div id="tv_11" data-role="tvRadio" data-name='color' data-value='green' class="d_radio1"data-css="d_radio1,d_radio2,d_radio3,d_radio4"></div><div class="lable_9">绿色</div>  
+        <div id="tv_12" data-role="tvRadio" data-name='color' data-value='blue' class="d_radio1"data-css="d_radio1,d_radio2,d_radio3,d_radio4"></div><div class="lable_10">蓝色 </div>    
+      	<div class="lable_11">多选框:</div>
+        <div id="tv_13" data-role="tvCheckbox" data-name='color1' data-value='red'  class="d_checkbox1" data-css="d_checkbox1,d_checkbox2,d_checkbox3,d_checkbox4"></div><div class="lable_12">红色</div>        
+        <div id="tv_14" data-role="tvCheckbox" data-name='color1' data-value='yellow' class="d_checkbox1" data-css="d_checkbox1,d_checkbox2,d_checkbox3,d_checkbox4"></div><div class="lable_13">黄色</div>        
+        <div id="tv_15" data-role="tvCheckbox" data-name='color1' data-value='green' class="d_checkbox1" data-css="d_checkbox1,d_checkbox2,d_checkbox3,d_checkbox4"></div><div class="lable_14">绿色</div>        
+        <div id="tv_16" data-role="tvCheckbox" data-name='color1' data-value='blue' class="d_checkbox1" data-css="d_checkbox1,d_checkbox2,d_checkbox3,d_checkbox4"></div><div class="lable_15">蓝色</div> 
+        <div id="tv_17" data-role="tvButton" class="d_button1" data-css="d_button1,d_button2">全选</div> 
+        <div id="tv_18" data-role="tvButton" class="d_button1" data-css="d_button1,d_button2">反选</div> 
+        
+        <div class="lable1_6">单选框:</div>
+        <div id="tv1_9"  data-role="tvRadio" data-name='color3' data-value='red' class="d_radio1" data-css="d_radio1,d_radio2,d_radio3,d_radio4"></div><div class="lable1_7">红色</div>  
+        <div id="tv1_10" data-role="tvRadio" data-name='color3' data-value='yellow' class="d_radio1" data-css="d_radio1,d_radio2,d_radio3,d_radio4"></div><div class="lable1_8">黄色</div>
+        <div id="tv1_11" data-role="tvRadio" data-name='color3' data-value='green' class="d_radio1"data-css="d_radio1,d_radio2,d_radio3,d_radio4"></div><div class="lable1_9">绿色</div>  
+        <div id="tv1_12" data-role="tvRadio" data-name='color3' data-value='blue' class="d_radio1"data-css="d_radio1,d_radio2,d_radio3,d_radio4"></div><div class="lable1_10">蓝色 </div>    
+  </div> 
+ <script type="text/javascript">
+ function init(){
+ 	$.tvPageInit('content');	
+	$('#tv_1').tvSetFocus();
+	$('#tv_1').tvOk(function(){
+		console.log('tv_3下拉框1 '+$('#tv_3').tvGetValue());		
+		console.log('tv_5文本框1 '+$('#tv_5').tvGetValue());
+		console.log('tv_7密码框1 '+$('#tv_7').tvGetValue());
+		console.log('color单选框1 '+$('div[data-name=color]').tvGetValue());
+		console.log('color1多选框1 '+$('div[data-name=color1]').tvGetValue());
+		console.log('color3单选框2 '+$('div[data-name=color3]').tvGetValue());
+	});
+	$('#tv_2').tvOk(function(){
+		//$.tvAlert('元素的类型未定义');
+		$.tvConfirm({				
+			content:'确定要删除这个吗？',			
+			onClose:function(v){
+				if(v){
+					alert('确认');
+				}
+			}
+		});	
+	});
+	$('#tv_9').tvOk(function(){
+	});	
+	$('#tv_3').data('option', [{'text':'第一天','value':'1'},{'text':'第二天','value':'2'},{'text':'第三天','value':'3'},{'text':'第四天','value':'4'},{'text':'第五天','value':'5'},{'text':'第六天','value':'6'},{'text':'第七天','value':'7'},{'text':'第八天','value':'8'},{'text':'第九天','value':'9'},{'text':'第十天','value':'10'}]);
+	$('#tv_3').tvSetValue(5);
+	$('#tv_7').tvSetValue('abcd');
+	$('#tv_5').tvSetValue(1234);
+	$('div[data-name=color]').tvSetValue('blue');
+	$('div[data-name=color1]').tvSetValue('blue,red');
+	$('div[data-name=color3]').tvSetValue('red');
+	$('#tv_5').tvOk(function(){
+		$.tvPassword();//显示密码框
+	})
+	$('#tv_6').tvOk(function(){
+		$.tvPassword();//显示密码框
+	})	
+	$('#tv_8').tvOk(function(){
+		$.softkey();
+	})
+	$('#tv_3').tvOk(function(){	
+		$.tvSelect();//显示下拉框
+	});
+	$('#tv_3').tvDown(function(){
+		console.log(123);
+		//return false;
+	})		
+	
+	$('#tv_4').data('option', [{'text':'第一天','value':'1'},{'text':'第二天','value':'2'},{'text':'第三天','value':'3'},{'text':'第四天','value':'4'},{'text':'第五天','value':'5'},{'text':'第六天','value':'6'},{'text':'第七天','value':'7'},{'text':'第八天','value':'8'}]);
+	$('#tv_4').tvSetValue(7);
+	$('#tv_4').tvOk(function(){	
+		$.tvSelect();//显示下拉框
+	});
+	$('#tv_7').tvOk(function(){
+	});
+	$('#tv_17').tvOk(function(){
+		$.tvCheckbox.chooseAll('color1');
+	});
+	$('#tv_18').tvOk(function(){
+		$.tvCheckbox.chooseNone('color1');
+	});
+	$('#tv_31').tvOk(function(){
+		$.changePage('page1.html',{'animate':'fade'});	
+	});
+ }
+
+function goBack(){
+	alert(123);
+}
+</script>
+</div> 
+<script> 
+$(function(){		
+	init();
+});
+</script>
+</body>
+</html>

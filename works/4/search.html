@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>首页</title>
+<link href="static/js/tvui2.0/themes/tv_default.css" rel="stylesheet" type="text/css" />
+<link href="static/js/tvui2.0/themes/tv_default.css" rel="stylesheet" type="text/css" />
+<script src="static/js/jquery-2.1.4.min.js"></script>
+<script src="static/js/data.js"></script>
+<script src="static/js/tvui2.0/jquery.tv.js"></script>
+<link href="static/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="search" class="index" data-role="tvPage">
+	<div class="search-top">
+		<div class="search-title">
+			<div class="search_icon"></div>
+			<div class="search_title">搜索</div>
+			<div id="search_content" class="search_content"></div>
+		</div>
+		<div id="search_left_arrow" class="search_left_arrow"></div>
+		<div id="searchDown" class="search_down"></div>
+		<div id="search_right_arrow" class="search_right_arrow"></div>
+		<div id="searchPage"></div>
+	</div>
+	<div class="search-key-filter"></div>
+	<div class="search-key">
+		<div class="search-text"><span id="search-text">请输入内容</span></div>
+		<div class="search-text-right">请输入中文拼音首字母</div>
+		<ul id="keyboard" class="search-keyboard"></ul>
+	</div>
+    
+    <div id="foot" class="foot">
+        <ul>
+            <li id="ft_menu1" class="css1" data-role="tvButton" data-css="css1,css2">
+                <div class="home_icon"></div>
+                <div class="menu_name">首页</div>
+            </li>
+            <li id="ft_menu2" data-role="tvButton" data-css="css1,css2">
+                <div class="game_icon"></div>
+                <div class="menu_name">游戏</div>		
+            </li>
+            <li id="ft_menu3" data-role="tvButton" data-css="css1,css2">
+                <div class="apply_icon"></div>
+                <div class="menu_name">应用</div>		
+            </li>
+            <li id="ft_menu4" data-role="tvButton" data-css="css1,css2">
+                <div class="search_icon"></div>
+                <div class="menu_name">搜索</div>		
+            </li>
+            <li id="ft_menu5" data-role="tvButton" data-css="css1,css2">
+                <div class="my_apply_icon" style="left:25px;"></div>
+                <div class="menu_name" style="left:65px;">我的应用</div>		
+            </li>
+        </ul>
+	</div>
+	<script>
+    var keyArray = ['Q','W','E','R','T','Y','U','I','O','P','1','2','3','A','S','D','F','G','H','J','K','L','0','4','5','6','Z','X','C','V','空格','B','N','M','删除','7','8','9'];
+    var aKeyStr = [];
+    function init(){
+        loadKeyBoardPanel();
+        $.tvPageInit('search');	
+        $('#ft_menu4').tvSetFocus();
+        $('#ft_menu1').tvOk(function(){
+            $.changePage('index.html');
+        });		
+        $('#ft_menu5').tvOk(function(){
+            $.changePage('myapply.html');
+        });
+    }	
+    function loadKeyBoardPanel(){
+        var boardArray = [];
+        for(var i=0,len=keyArray.length;i<len;i++){
+            if(i==34){				
+                boardArray.push('<li class="search-del" id="li_'+i+'" data-role="tvButton" data-css="search-del,search-del-hover"><div class="search-del-icon"></div><div class="search-del-name">'+keyArray[i]+'</div></li>');
+            }else{				
+                boardArray.push('<li class="licss1" id="li_'+i+'" data-role="tvButton" data-css="licss1,licss2">'+keyArray[i]+'</li>');
+            }
+        }
+        $('#keyboard').html(boardArray.join(''));
+        for(var i=0;i<keyArray.length;i++){
+            (function(num){
+                $('#li_'+num).tvOk(function(){
+                    var keyStr = keyArray[num];
+                    switch (keyStr){
+                        case '删除':{
+                            aKeyStr.pop();break;
+                        };
+                        case '空格':{
+                            aKeyStr.push(" ");break;
+                        };
+                        default :{
+                            aKeyStr.push(keyStr);
+                        }
+                    } 
+                    $('#search-text').html(aKeyStr.length!=0?aKeyStr.join(''):'请输入内容');
+					doSearch();
+                })
+            }(i))
+        }
+    }
+	
+	function doSearch(appListJson){
+		var appListJson = myappData;
+		var appList = appListJson.dataList;
+		var appArray = [];
+		appArray.push('<ul>');
+		for(var i=0;i<appList.length&&i<4;i++){
+			var a = appList[i];	
+			appArray.push('<li id="prod'+(i+1)+'" class="css1" data-role="tvButton" data-css="css1,css2"><img src="${imageHost}'+a.pic1+'" class="cd_img"/><div class="cd_name">'+a.prodName+'</div>');
+			appArray.push('<div class="star"><ul><li class="css02"></li><li class="css02"></li><li class="css02"></li><li class="css02"></li><li class="css01"></li></ul></div></li>');
+		}
+		appArray.push('</ul>');
+		$('#searchDown').html(appArray.join(''));
+		var oLeftArrow = document.getElementById('search_left_arrow');
+		var oRightArrow = document.getElementById('search_right_arrow');
+		oLeftArrow.style.display='none';
+		oRightArrow.style.display='none';
+		if(appListJson.totalPage==0){
+			$('#searchPage').html('');
+		}else{
+			$('#searchPage').html(appListJson.currentPage+'&nbsp;&nbsp;/&nbsp;&nbsp;'+appListJson.totalPage+'&nbsp;&nbsp;共 &nbsp;'+appListJson.total+'&nbsp;个');
+			if(appListJson.currentPage!=1){oLeftArrow.style.display='block'}
+			if(appListJson.currentPage!=appListJson.totalPage){oRightArrow.style.display='block';}
+		}
+		if(aKeyStr.length>0){
+			$('#search_content').html('共找到"'+appListJson.total+'"个首字母为"'+aKeyStr.join('')+'"的搜索结果！');
+		}else{
+			$('#search_content').html('');
+		}
+		$.tvPageInit('search');	
+	}  
+    </script>
+</div>
+<script>
+$(function(){init();});
+</script>
+</body>
+</html>
