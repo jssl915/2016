@@ -63,9 +63,13 @@ h1{text-align: center}
     text-align: center;
 }
 .resume-img{
-    border: 8px solid #f2eaea;
+    border: 8px solid #f7f3f3;
     border-radius: 50%;
     margin: auto;
+    transition: all 0.5s ease 0s;
+}
+.resume-img:hover{
+    transform: rotate(360deg);
 }
 .p0-title{
     margin: 20px auto;
@@ -91,4 +95,9 @@ h1{text-align: center}
 }
 .p0-email:hover{
     color: #d0d00d;
+}
+.p1-title{
+    margin: 20px auto;
+    font-size: 50px;
+    color: #ffffff;
 }
