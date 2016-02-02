@@ -1,0 +1,142 @@
+@charset "utf-8";
+*{margin:0;padding:0}
+body{font-family: "黑体";font-size: 24px;overflow:hidden;}
+body [data-type="tv_page"]{border:0 none;position:absolute;left:0;top:0;width:100%;min-height:100%;}
+/*css3动画样式 */
+.slideouttoleft{-moz-animation:slideouttoleft .35s ease-in-out;-webkit-animation:slideouttoleft .35s ease-in-out;animation:slideouttoleft .35s ease-in-out;}
+@-moz-keyframes slideouttoleft{from{-moz-transform:translateX(0);}
+to{-moz-transform:translateX(-100%);}
+}
+@-webkit-keyframes slideouttoleft{from{-webkit-transform:translateX(0);}
+to{-webkit-transform:translateX(-100%);}
+}
+@keyframes slideouttoleft{from{transform:translateX(0);}
+to{transform:translateX(-100%);}
+}
+
+
+.slideinfromright{-moz-animation:slideinfromright .35s ease-in-out;-webkit-animation:slideinfromright .35s ease-in-out;animation:slideinfromright .35s ease-in-out;}
+@-moz-keyframes slideinfromright{from{-moz-transform:translateX(100%);}
+to{-moz-transform:translateX(0);}
+}
+@-webkit-keyframes slideinfromright{from{-webkit-transform:translateX(100%);}
+to{-webkit-transform:translateX(0);}
+}
+@keyframes slideinfromright{from{transform:translateX(100%);}
+to{transform:translateX(0);}
+}
+
+
+.slideinfromleft{-moz-animation:slideinfromleft .35s ease-in-out;-webkit-animation:slideinfromleft .35s ease-in-out;animation:slideinfromleft .35s ease-in-out;}
+@-moz-keyframes slideinfromleft{from{-moz-transform:translateX(-100%);}
+to{-moz-transform:translateX(0);}
+}
+@-webkit-keyframes slideinfromleft{from{-webkit-transform:translateX(-100%);}
+to{-webkit-transform:translateX(0);}
+}
+@keyframes slideinfromleft{from{transform:translateX(-100%);}
+to{transform:translateX(0);}
+}
+
+
+.slideouttoright{-moz-animation:slideouttoright .35s ease-in-out;-webkit-animation:slideouttoright .35s ease-in-out;animation:slideouttoright .35s ease-in-out;}
+@-moz-keyframes slideouttoright{from{-moz-transform:translateX(0);}
+to{-moz-transform:translateX(100%);}
+}
+@-webkit-keyframes slideouttoright{from{-webkit-transform:translateX(0);}
+to{-webkit-transform:translateX(100%);}
+}
+@keyframes slideouttoright{from{transform:translateX(0);}
+to{transform:translateX(100%);}
+}
+
+.slideouttoup{-moz-animation:slideouttoup .35s ease-in-out;-webkit-animation:slideouttoup .35s ease-in-out;animation:slideouttoup .35s ease-in-out;}
+@-moz-keyframes slideouttoup{from{-moz-transform:translateY(0);}
+to{-moz-transform:translateY(-100%);}
+}
+@-webkit-keyframes slideouttoup{from{-webkit-transform:translateY(0);}
+to{-webkit-transform:translateY(-100%);}
+}
+@keyframes slideouttoup{from{transform:translateY(0);}
+to{transform:translateY(-100%);}
+}
+
+.slideinfromdown{-moz-animation:slideinfromdown .35s ease-in-out;-webkit-animation:slideinfromdown .35s ease-in-out;animation:slideinfromdown .35s ease-in-out;}
+@-moz-keyframes slideinfromdown{from{-moz-transform:translateY(100%);}
+to{-moz-transform:translateY(0);}
+}
+@-webkit-keyframes slideinfromdown{from{-webkit-transform:translateY(100%);}
+to{-webkit-transform:translateY(0);}
+}
+@keyframes slideinfromdown{from{transform:translateY(100%);}
+to{transform:translateY(0);}
+}
+
+.slideinfromup{-moz-animation:slideinfromup .35s ease-in-out;-webkit-animation:slideinfromup .35s ease-in-out;animation:slideinfromup .35s ease-in-out;}
+@-moz-keyframes slideinfromup{from{-moz-transform:translateY(-100%);}
+to{-moz-transform:translateY(0);}
+}
+@-webkit-keyframes slideinfromup{from{-webkit-transform:translateY(-100%);}
+to{-webkit-transform:translateY(0);}
+}
+@keyframes slideinfromup{from{transform:translateY(-100%);}
+to{transform:translateY(0);}
+}
+
+.slideouttodown{-moz-animation:slideouttodown .35s ease-in-out;-webkit-animation:slideouttodown .35s ease-in-out;animation:slideouttodown .35s ease-in-out;}
+@-moz-keyframes slideouttodown{from{-moz-transform:translateY(0);}
+to{-moz-transform:translateY(100%);}
+}
+@-webkit-keyframes slideouttodown{from{-webkit-transform:translateY(0);}
+to{-webkit-transform:translateY(100%);}
+}
+@keyframes slideouttodown{from{transform:translateY(0);}
+to{transform:translateY(100%);}
+}
+
+
+
+.fadeout{-moz-animation:fadeout .35s ease-in-out;-webkit-animation:fadeout .35s ease-in-out;animation:fadeout .35s ease-in-out;}
+@-moz-keyframes fadeout{from{opacity:1;}
+to{opacity:0;}
+}
+@-webkit-keyframes fadeout{from{opacity:1;}
+to{opacity:0;}
+}
+@keyframes fadeout{from{opacity:1;}
+to{opacity:0;}
+}
+.fadein{-moz-animation:fadein .35s ease-in-out;-webkit-animation:fadein .35s ease-in-out;animation:fadein .35s ease-in-out;}
+@-moz-keyframes fadein{from{opacity:0;}
+to{opacity:1;}
+}
+@-webkit-keyframes fadein{from{opacity:0;}
+to{opacity:1;}
+}
+@keyframes fadein{from{opacity:0;}
+to{opacity:1;}
+}
+.popin{-moz-animation:popin .35s ease-in-out;-webkit-animation:popin .35s ease-in-out;animation:popin .35s ease-in-out;}
+@-moz-keyframes popin{from{-moz-transform:scale(.8);opacity:0;}
+to{-moz-transform:scale(1);opacity:1;}
+}
+@-webkit-keyframes popin{from{-webkit-transform:scale(.8);opacity:0;}
+to{-webkit-transform:scale(1);opacity:1;}
+}
+@keyframes popin{from{transform:scale(.8);opacity:0;}
+to{transform:scale(1);opacity:1;}
+}
+.popout{-moz-animation:popout .35s ease-in-out;-webkit-animation:popout .35s ease-in-out;animation:popout .35s ease-in-out;}
+@-moz-keyframes popout{from{-moz-transform:scale(1);opacity:1;}
+to{-moz-transform:scale(.8);opacity:0;}
+}
+@-webkit-keyframes popout{from{-webkit-transform:scale(1);opacity:1;}
+to{-webkit-transform:scale(.8);opacity:0;}
+}
+@keyframes popout{from{transform:scale(1);opacity:1;}
+to{transform:scale(.8);opacity:0;}
+}
+ 
+压缩代码格式(多行)格式(单行)还原代码复制结果退出 
+学习CSS[群2] 32560934·GamblerX （305335291）制作·E-mail:hyjiacan@163.com 
+ 
