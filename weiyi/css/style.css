@@ -219,3 +219,102 @@ h3 {
     margin: 40px 0 50px !important;
     text-align: center !important;
 }
+
+/*书架*/
+#container::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+#container {
+    margin: 50px auto 30px;
+    position: relative;
+    width: 840px;
+}
+.content {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 3px #ddd;
+    color: #222;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide {
+    border-bottom: 1px solid #eee;
+    border-radius: 4px 4px 0 0;
+    height: 190px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.list-bg {
+    float: left;
+    width: 850px;
+}
+.list-bg .book-list li {
+    display: inline-block;
+    float: left;
+    height: 244px;
+    list-style: outside none none;
+    margin: 20px 8px 10px 20px;
+    width: 134px;
+}
+
+.book-bg {
+    background: rgba(0, 0, 0, 0) url("../images/book-bg.png") repeat scroll 0 0;
+    display: inline-block;
+    float: left;
+    height: 184px;
+    text-align: center;
+    width: 134px;
+}
+
+.book-bg img {
+    border-radius: 2px;
+    position: relative;
+    top: 14px;
+}
+img {
+    border: medium none;
+}
+.book-name {
+    font-size: 16px;
+    margin: 0 0 0 17px;
+    width: 117px;
+}
+.book-name a {
+    color: #000;
+}
+.book-author {
+    color: #b3b3b3;
+    font-size: 14px;
+    margin: 5px 0 0 17px;
+    width: 117px;
+}
+.pagetion {
+    background: #eee none repeat scroll 0 0;
+    border-radius: 0 0 4px 4px;
+    border-top: 1px solid #ddd;
+    display: inline-block;
+    float: left;
+    padding: 15px 10px;
+    width: 100%;
+}
+.page_num {
+    float: right;
+}
+.page_num a {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+    margin-left: 3px;
+    padding: 3px 8px;
+}
+a {
+    color: #259;
+    text-decoration: none;
+}
