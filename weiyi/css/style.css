@@ -36,10 +36,10 @@ body {
     margin-left: 2%;
     width: 600px;
 }
-.nav span {
+.nav a {
     float: left;
 }
-.head-text a {
+.head-text{
     color: #dddddd;
     font-family: "微软雅黑","黑体";
     font-size: 26px;
@@ -47,22 +47,28 @@ body {
     margin-right: 10px;
     text-decoration: none;
 }
-.nav-text a {
+.nav-text{
     border-left: 1px solid #ffffff;
     border-right: 1px solid #ffffff;
     color: #999999;
-    display: block;
     text-align: center;
     text-decoration: none;
     width: 110px;
+    display: block;
+}
+.nav-text:hover{
+    background: #fcfcfc none repeat scroll 0 0;
+    border-left: 1px solid #f8f8f8;
+    border-right: 1px solid #f8f8f8;
+    box-shadow: 0 9px 8px #f8f8f8 inset;
+    text-align: center;
+    color: #20b3d8;
 }
 .activity{
     background: #fcfcfc none repeat scroll 0 0;
     border-left: 1px solid #f8f8f8;
     border-right: 1px solid #f8f8f8;
     box-shadow: 0 9px 8px #f8f8f8 inset;
-}
-.activity a{
     color: #20b3d8;
 }
 .past_table {
@@ -149,4 +155,67 @@ h3 {
     overflow: hidden;
     width: 800px;
     text-align: center;
+}
+/**文章*/
+#article_show::before {
+    border: 1px dashed #cccccc;
+    bottom: 5px;
+    box-shadow: 0 0 0 1px #ffffff;
+    content: "";
+    left: 5px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: -1;
+}
+#article_show::before {
+    border: 1px dashed #cccccc;
+    bottom: 5px;
+    box-shadow: 0 0 0 1px #ffffff;
+    content: "";
+    left: 5px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: -1;
+}
+#article_show::after {
+    clear: both;
+    content: ".";
+    display: block;
+    visibility: hidden;
+}
+#article_show {
+    background-color: #ffffff;
+    background-image: -moz-linear-gradient(center top , #ffffff, #ffffff);
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.2), 0 3px 0 #ffffff, 0 4px 0 rgba(0, 0, 0, 0.2), 0 6px 0 #ffffff, 0 7px 0 rgba(0, 0, 0, 0.2);
+    margin: 40px auto 0;
+    min-height: 300px;
+    padding: 80px 50px 0;
+    position: relative;
+    width: 700px;
+    z-index: 0;
+}
+#article_show h1 {
+    color: #000000;
+    font-weight: normal;
+    letter-spacing: 4px;
+    margin: 0 0 30px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+}
+#article_show p {
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 30px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+.article_author {
+    color: #999999 !important;
+    margin: 40px 0 50px !important;
+    text-align: center !important;
 }
