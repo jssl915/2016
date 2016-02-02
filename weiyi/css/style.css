@@ -118,6 +118,8 @@ h3 {
     font-size: 14px;
     padding: 0 6px 3px;
     width: 250px;
+    height: 20px;
+    overflow: hidden;
 }
 .voice_tag {
     background: #3f3f3f none repeat scroll 0 0;
