@@ -1,0 +1,87 @@
+@charset "utf-8";
+*{margin: 0;padding: 0}
+ul{list-style-type: none}
+a{text-decoration: none}
+body, button, input, select, textarea {
+    color: #595959;
+    font-family: helvetica,Arial,"Hiragino Sans GB","Microsoft YaHei",simsun;
+    font-size: 14px;
+    min-height: 100%;
+    background: #ffffff;
+}
+.content{
+    margin: 30px auto;
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    width: 1000px;
+}
+.title {
+    border-bottom: 1px solid #e6e6e6;
+    clear: both;
+    margin: 0 30px 20px;
+    padding-bottom: 10px;
+}
+.title-text {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    text-align: center;
+}
+.valid-wrap{
+    margin: 0 auto;
+    width: 358px;
+}
+.valid-table{
+    width: 360px;
+}
+.valid-left{
+    clear: both;
+    color: #595959;
+    float: left;
+    font-size: 16px;
+    line-height: 40px;
+    width: 80px;
+}
+.valid-right{
+    clear: right;
+    float: right;
+    width: 300px;
+}
+.valid-input{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: block;
+    height: 38px;
+    line-height: 38px;
+    outline: 0 none;
+    text-indent: 17px;
+    width: 100%;
+}
+.valid-input.error {
+    border-color: #f74937;
+    box-shadow: 0 0 6px #f74937;
+}
+.error-msg {
+    color: #f74937;
+    margin: 5px 0;
+    height: 16px;
+}
+.valid-submit{
+    margin: 20px 0 22px 93px;
+    background: #ff6557 none repeat scroll 0 0;
+    border-radius: 3px;
+    box-shadow: 0 2px 2px 0 #d8d7d7;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    width: 164px;
+}
+.valid-submit:hover{
+    background:#ff7464;
+}
