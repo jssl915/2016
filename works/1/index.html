@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>叫师管理后台</title>
+    <link rel="stylesheet" href="css/pagination.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/twbsPagination.js"></script>
+</head>
+<body>
+<div class="header">
+    <a class="logo" href="index.html">叫师管理后台</a>
+    <div class="navbar">
+        <div class="nav-person">
+            李晶
+            <i class="caret"></i>
+            <div class="nav-person-dialog">
+                <div id="exitPgc" class="header-dialog-div">退出</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="left-side">
+        <div class="sidebar">
+            <div class="left-title">Hello,李晶</div>
+            <ul id="leftMenu" class="sidebar-menu">
+                <li>首页</li>
+                <li class="active">代理商管理</li>
+                <li>教师管理</li>
+                <li>用户管理</li>
+                <li>场地管理</li>
+                <li>财务管理</li>
+                <li>课程管理</li>
+            </ul>
+        </div>
+    </div>
+    <div class="right-side">
+        <iframe id="pRightFrame" name="pRightFrame"  width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" onLoad="iFrameHeight()"></iframe>
+    </div>
+</div>
+<script>
+var menuData = [
+    {name:'代理商管理',url:'agent.html'},
+    {name:'教师管理',url:'teacher.html'},
+    {name:'场地管理',url:'place.html'},
+    {name:'课程价格管理',url:'finance1.html'},
+    {name:'营销管理',url:'finance2.html'},
+    {name:'课程管理',url:'course.html'}
+]
+$(function(){
+    $('#exitPgc').click(function(){
+        window.location.href="login.html";
+    });
+    addMenuHtml();
+});
+function addMenuHtml(){
+    var aHtml = [];
+    for(var i=0;i<menuData.length;i++){
+        var d = menuData[i];
+        aHtml.push('<li onclick="loadMenu('+i+')">'+ d.name+'</li>');
+    }
+    $('#leftMenu').html(aHtml.join(''));
+    loadMenu(0);
+}
+function loadMenu(num){
+    $('#leftMenu li').removeClass('active');
+    $($('#leftMenu li')[num]).addClass('active');
+    $('#pRightFrame').attr('src',menuData[num].url);
+}
+function iFrameHeight() {
+    var ifm= document.getElementById("pRightFrame");
+    var subWeb = document.frames ? document.frames["pRightFrame"].document : ifm.contentDocument;
+    if(ifm != null && subWeb != null) {
+        ifm.height = subWeb.body.scrollHeight;
+        ifm.width = subWeb.body.scrollWidth;
+        console.log(subWeb.body.scrollHeight);
+    }
+}
+</script>
+</body>
+</html>

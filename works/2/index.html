@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>叫师管理后台</title>
+    <link rel="stylesheet" href="css/pagination.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/twbsPagination.js"></script>
+</head>
+<body>
+<div class="header">
+    <a class="logo" href="index.html">叫师管理后台</a>
+    <div class="navbar">
+        <div class="nav-person">
+            李晶
+            <i class="caret"></i>
+            <div class="nav-person-dialog">
+                <div id="exitPgc" class="header-dialog-div">退出</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="left-side">
+        <div class="sidebar">
+            <div class="left-title">Hello,李晶</div>
+            <ul id="leftMenu">
+                <li class="nav-header">
+                    <span class="menu-title">首页</span>
+                    <span class="icon icon2"></span>
+                    <ul class="nav-list">
+                        <li>
+                            <span class="icon3"></span>
+                            <span class="menu-title2">首页1</span>
+                        </li>
+                        <li class="active">
+                            <span class="icon3"></span>
+                            <span class="menu-title2">首页1</span>
+                        </li>
+                        <li>
+                            <span class="icon3"></span>
+                            <span class="menu-title2">首页1</span>
+                        </li>
+                        <li style="border-bottom: 1px solid #c8c8cb;">
+                            <span class="icon3"></span>
+                            <span class="menu-title2">首页1</span>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-header">
+                    <span class="icon2"></span>
+                    <span class="menu-title">代理商管理</span>
+                </li>
+                <li class="nav-header">
+                    <span class="icon2"></span>
+                    <span class="menu-title">教师管理</span>
+                </li>
+                <li class="nav-header">
+                    <span class="icon2"></span>
+                    <span class="menu-title">用户管理</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="right-side">
+        <iframe id="pRightFrame" src="main.html" name="pRightFrame"  width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" onLoad="iFrameHeight()"></iframe>
+    </div>
+</div>
+<script>
+    var menuData = [
+        {name:'首页',url:'main.html'},
+        {name:'代理商管理',
+            menu:[
+                {name:'代理商管理1', url:'agent.html'},
+                {name:'代理商管理2', url:'agent.html'},
+                {name:'代理商管理3', url:'agent.html'}
+            ]
+        },
+        {name:'教师管理',
+            menu:[
+                {name:'教师管理1', url:'teacher.html'},
+                {name:'教师管理2', url:'teacher.html'},
+                {name:'教师管理3', url:'teacher.html'}
+            ]
+        },
+        {name:'场地管理',
+            menu:[
+                {name:'场地管理1', url:'place.html'},
+                {name:'场地管理2', url:'place.html'},
+                {name:'场地管理3', url:'place.html'}
+            ]
+        },
+        {name:'课程管理',
+            menu:[
+                {name:'课程管理1', url:'course.html'},
+                {name:'课程管理2', url:'course.html'},
+                {name:'课程管理3', url:'course.html'}
+            ]
+        }
+    ]
+    $(function(){
+        $('#exitPgc').click(function(){
+            window.location.href="login.html";
+        });
+        addMenuHtml();
+    });
+    function addMenuHtml(){
+        var aHtml = [];
+        for(var i=0;i<menuData.length;i++){
+            var d = menuData[i];
+            if(d.url) {
+                aHtml.push('<li class="nav-header" data-url="' + d.url + '">');
+            }else{
+                aHtml.push('<li class="nav-header">');
+            }
+            aHtml.push('<span class="menu-title">'+ d.name+'</span>');
+            var menu = d.menu;
+            if(menu&& menu.length>0){
+                aHtml.push('<span class="icon icon1"></span>');
+                aHtml.push('<ul class="nav-list">');
+                for(var j=0;j< menu.length;j++){
+                    var d1 = menu[j];
+                    if(j == menu.length-1){
+                        aHtml.push('<li class="nav-menu" data-url="'+d1.url+'" style="border-bottom:1px solid #c8c8cb;">');
+                    }else{
+                        aHtml.push('<li class="nav-menu" data-url="'+d1.url+'">');
+                    }
+                    aHtml.push('<span class="icon3"></span>');
+                    aHtml.push('<span class="menu-title2">'+d1.name+'</span>');
+                    aHtml.push('</li>');
+                }
+                aHtml.push('</ul>');
+            }
+            aHtml.push('</li>');
+        }
+        $('#leftMenu').html(aHtml.join(''));
+        $('.menu-title').click(function(){
+            var oParent = $(this).parent();
+            var oUl = oParent.find('.nav-list');
+            var oSpan = oParent.find('.icon');
+            if(oUl.is(':hidden')){
+                oUl.slideDown();
+                oSpan.attr('class','icon icon1');
+            }else{
+                oUl.slideUp();
+                oSpan.attr('class','icon icon2');
+            }
+        });
+        $('.nav-header').click(function(){
+            var url = $(this).data('url');
+            if(url){changeMenu(url)}
+        });
+        $('.nav-menu').click(function(){
+            $('.nav-menu').removeClass('active');
+            $(this).addClass('active');
+            changeMenu($(this).data('url'));
+            return false
+        });
+    }
+    function changeMenu(url){
+        $('#pRightFrame').attr('src',url);
+    }
+
+    function iFrameHeight() {
+        var ifm= document.getElementById("pRightFrame");
+        var subWeb = document.frames ? document.frames["pRightFrame"].document : ifm.contentDocument;
+        if(ifm != null && subWeb != null) {
+            ifm.height = subWeb.body.scrollHeight;
+            ifm.width = subWeb.body.scrollWidth;
+        }
+    }
+</script>
+</body>
+</html>

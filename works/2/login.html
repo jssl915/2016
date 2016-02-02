@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>叫师后台管理系统-登录</title>
+    <link rel="shortcut icon" href="images/wh_ico.ico"/>
+    <link rel="stylesheet" href="css/login.css" type="text/css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<div class="singup">
+    <h3>叫师后台管理系统</h3>
+    <div class="signup-main">
+        <form>
+            <input type="text" name="username" class="login-text" placeholder="用户名"/>
+            <input type="password" name="password" class="login-text" placeholder="密码"/>
+            <div id="loginBtn" class="login-btn">登录</div>
+        </form>
+    </div>
+</div>
+<script>
+$(function(){
+    $('#loginBtn').click(function(){
+        window.location.href="index.html";
+    });
+});
+</script>
+</body>
+</html>

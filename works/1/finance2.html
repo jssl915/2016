@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>叫师管理后台</title>
+    <link rel="stylesheet" href="css/pagination.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/html5.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/twbsPagination.js"></script>
+</head>
+<body>
+<div id="rightFrame" class="right-frame">
+    <div class="content-header">营销活动管理</div>
+    <div class="table-search-div">
+        <table class="table-search">
+            <tr>
+                <td>教师姓名</td>
+                <td><input type="text" name="area" class="search-text"></td>
+                <td>教学科目</td>
+                <td><input type="text" name="username" class="search-text"></td>
+                <td><div class="search-btn">搜索</div></td>
+            </tr>
+        </table>
+        <a  class="add operate-btn-add" onclick="toAdd()">
+            发布
+        </a>
+    </div>
+    <div class="table-list-div">
+        <table class="table-list">
+            <caption> 课程价格列表 </caption>
+            <thead>
+            <tr>
+                <th>编号</th>
+                <th>年级</th>
+                <th>科目</th>
+                <th>班型</th>
+                <th>课次</th>
+                <th>总课时</th>
+                <th>单价(元)</th>
+                <th>学费(元)</th>
+                <th>开班人数</th>
+                <th>满班人数</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>你好</td>
+                <td>你好</td>
+                <td>你好</td>
+                <td>你好</td>
+                <td>你好</td>
+                <td>你好</td>
+                <td>你好</td>
+                <td>你好</td>
+                <td>你好</td>
+                <td><span class="operate-btn">删除</span></td>
+            </tr>
+            </tbody>
+        </table>
+        <ul id="pagination-demo" class="pagination-sm"></ul>
+    </div>
+</div>
+<script>
+$(function(){
+    $('#pagination-demo').twbsPagination({
+        totalPages: 20,
+        visiblePages: 10,
+        current_page:1,
+        onPageClick: function (event, page) {
+            getPage(page);
+        }
+    });
+});
+function toAdd(){
+    window.location.href="agent_add.html"
+}
+</script>
+</body>
+</html>
