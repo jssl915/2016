@@ -256,6 +256,7 @@ h3 {
 .list-bg {
     float: left;
     width: 850px;
+    padding-bottom: 50px;
 }
 .list-bg .book-list li {
     display: inline-block;
