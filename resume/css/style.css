@@ -41,6 +41,15 @@ h1{text-align: center}
 #section3{
     background: #EAE1C0;
 }
+#section4{
+    background: #8FB98B;
+}
+#section5{
+    background: #DE564B;
+}
+#section6{
+    background: #EAE1C0;
+}
 .clock-div{
     position: absolute;
     top:40px;
