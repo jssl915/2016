@@ -41,106 +41,6 @@ h1{text-align: center}
 #section3{
     background: #EAE1C0;
 }
-#section4{
-    background: #8FB98B;
-}
-#section5{
-    background: #DE564B;
-}
-#section6{
-    background: #EAE1C0;
-}
-.arrow-icon{
-    position: fixed;
-    bottom:10%;
-    height: 20px;
-    left: 50%;
-    margin-left: -15px;
-    width: 30px;
-    z-index: 999;
-}
-.icon_down {
-    background: rgba(0, 0, 0, 0) url("../images/web_down.png") no-repeat scroll 0 0;
-    top: -20px;
-    display: block;
-    height: 34px;
-    left: 50%;
-    margin-left: -15px;
-    position: absolute;
-    width: 30px;
-    z-index: 999;
-    cursor: pointer;
-    -webkit-animation: jump 1s infinite;
-    -moz-animation: jump 1s infinite;
-    -o-animation: jump 1s infinite;
-    -ms-animation: jump 1s infinite;
-    animation: jump 1s infinite;
-}
-/* Animations */
-
-@-webkit-keyframes jump {
-    0% {top: -20px;
-        -webkit-animation-timing-function: ease-in;
-    }
-    50% {top: 0px;
-        -webkit-animation-timing-function: ease-out;
-    }
-    100% {top: -20px;
-        -webkit-animation-timing-function: ease-in;
-    }
-}
-
-@-moz-keyframes jump {
-    0% {top: -20px;
-        -moz-animation-timing-function: ease-in;
-    }
-    50% {top: 0px;
-        -moz-animation-timing-function: ease-out;
-    }
-    100% {top: -20px;
-        -moz-animation-timing-function: ease-in;
-    }
-}
-
-@-o-keyframes jump {
-    0% {top: -20px;
-        -o-animation-timing-function: ease-in;
-    }
-    50% {top: 0;
-        -o-animation-timing-function: ease-out;
-    }
-    100% {top: -20px;
-        -o-animation-timing-function: ease-in;
-    }
-}
-
-@-ms-keyframes jump {
-    0% {top: -20px;
-        -ms-animation-timing-function: ease-in;
-    }
-    50% {top: 0;
-        -ms-animation-timing-function: ease-out;
-    }
-    100% {top: -20px;
-        -ms-animation-timing-function: ease-in;
-    }
-}
-
-@keyframes jump {
-    0% {
-        top: -20px;
-        animation-timing-function: ease-in;
-    }
-    50% {
-        top: 0;
-        animation-timing-function: ease-out;
-    }
-    100% {
-        top: -20px;
-        animation-timing-function: ease-in;
-    }
-}
-
 .clock-div{
     position: absolute;
     top:40px;
@@ -163,14 +63,9 @@ h1{text-align: center}
     text-align: center;
 }
 .resume-img{
-    /*border: 8px solid #f7f3f3;*/
-    border: 5px solid rgba(255, 255, 255, 0.5);
+    border: 8px solid #f2eaea;
     border-radius: 50%;
     margin: auto;
-    transition: all 0.5s ease 0s;
-}
-.resume-img:hover{
-    transform: rotate(360deg);
 }
 .p0-title{
     margin: 20px auto;
@@ -196,9 +91,4 @@ h1{text-align: center}
 }
 .p0-email:hover{
     color: #d0d00d;
-}
-.p1-title{
-    margin: 20px auto;
-    font-size: 50px;
-    color: #ffffff;
 }
