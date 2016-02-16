@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>index</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/hover-min.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link type="image/x-icon" href="images/icon.ico" rel="shortcut icon">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/jquery.extends.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                //sectionsColor: ['#8FB98B', '#DE564B', '#EAE1C0'],
+                navigation: true,
+                navigationTooltips: ['首页', '基本信息', '教育背景', '工作经历','项目经验','开源作品'],
+                slidesNavigation: false
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="arrow-icon">
+    <i class="icon_down"></i>
+</div>
+<div id="fullpage">
+    <div class="section " id="section0">
+        <div id="clockDiv" class="clock-div">
+            <div id="clockTime" class="clock-time"></div>
+        </div>
+        <div class="p0-content">
+            <img src="images/resume-img.jpg" class="resume-img" style="width: 200px;height: 200px;">
+            <h1 class="p0-title hvr-wobble-horizontal" style="display: block">扬帆</h1>
+            <p class="p0-sub-title">怕什么真理无穷 ， 进一寸有一寸的欢喜!</p>
+            <h4 class="p0-text">java工程师、前端工程师</h4>
+            <p><a class="p0-email" href="mailto:me@weiyilee.com">me@weiyilee.com</a> </p>
+        </div>
+    </div>
+
+    <div class="section page2" id="section1">
+        <div class="p0-content web_resume_r">
+            <div class="basicinfo">
+                <h2 class="title_font animated fadeInUpBig"></h2>
+                <ul class=" animated fadeInUpBig" style="-webkit-animation-delay:0.8s;-moz-animation-delay:0.8s;animation-delay:0.8s;">
+                    <li id="edit_value_birthday_hide" class="birthday" title="年龄">
+                        <i class="basic_icon"></i>
+                        <a id="edit_value_birthday">30岁</a>
+                    </li>
+                    <li id="edit_value_address_hide" class="address" title="居住地">
+                        <i class="basic_icon"></i>
+                        <a id="edit_value_address">湖北省武汉市中冶创业苑</a>
+                    </li>
+                    <li id="edit_value_mobile_hide" class="mobile" title="手机号码">
+                        <i class="basic_icon"></i>
+                        <a id="edit_value_mobile">1507132****</a>
+                    </li>
+                    <li id="edit_value_email_hide" class="email" title="电子邮箱">
+                        <i class="basic_icon"></i>
+                        <a id="edit_value_email" href="mailto:me@weiyilee.com">me@weiyilee.com</a>
+                    </li>
+                    <div id="more_singe">
+                        <li class="hobby" title="">
+                            <i class="basic_icon"></i>
+                            <a href="http://www.weiyilee.com/" target="_blank">http://www.weiyilee.com/</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section page4" id="section2">
+        <div class="p0-content">
+            <div class="edu">
+                <h2 class="title_font animated fadeInUpBig" style="-webkit-animation-delay:0.4s;-moz-animation-delay:0.4s;animation-delay:0.4s;"></h2>
+                <i class="resume_icon animated fadeInUpBig" style="-webkit-animation-delay:0.8s;-moz-animation-delay:0.8s;animation-delay:0.8s;"></i>
+                <div id="edu" style="margin-left: 100px;">
+                    <dl class="animated fadeInRightBig" style="-webkit-animation-delay:1.2s;-moz-animation-delay:1.2s;animation-delay:1.2s;">
+                        <dt>
+                        <p class="edu_time">2005.09-2009.07 </p>
+                        <p class="edu_time">信息管理与信息系统</p>
+                        <p class="edu_name">中南财经政法大学</p>
+                        </dt>
+                    </dl>
+                    <dl class="animated fadeInRightBig" style="-webkit-animation-delay:1.2s;-moz-animation-delay:1.2s;animation-delay:1.2s;">
+                        <dt>
+                        <p class="edu_time">2009.09-2012.06 </p>
+                        <p class="edu_time">管理信息系统(数据挖掘)</p>
+                        <p class="edu_name">中南财经政法大学</p>
+                        </dt>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section page5" id="section3">
+        <div class="p0-content">
+            <div class="exper">
+                <h2 class="title_font animated fadeInUpBig" style="-webkit-animation-delay:0.4s;-moz-animation-delay:0.4s;animation-delay:0.4s;">工作经历</h2>
+                <i class="resume_icon animated fadeInUpBig" style="-webkit-animation-delay:0.6s;-moz-animation-delay:0.6s;animation-delay:0.6s;"></i>
+                <div class="exper_content">
+                    <ul id="experC">
+                        <li class="animated fadeInUpBig" style="margin-top:84px;-webkit-animation-delay:0.8s;-moz-animation-delay:0.8s;animation-delay:0.8s;">
+                            <i class="exper_icon"></i>
+                            <p class="exper_time">2011 /7--2013 /6</p>
+                            <p class="exper_cpname">烽火</p>
+                            <p class="exper_name">java工程师</p>
+                            <p class="exper_dsc">
+                                电视商城1.0版本。<br>
+                                电视商城2.0版本。<br>
+                            </p>
+                        </li>
+                        <li class="animated fadeInUpBig" style="margin-top:120px;-webkit-animation-delay:1.2s;-moz-animation-delay:1.2s;animation-delay:1.2s;">
+                            <i class="exper_icon"></i>
+                            <p class="exper_time">2013 /6--2015 /6</p>
+                            <p class="exper_cpname">高锐视讯</p>
+                            <p class="exper_name">java工程师,前端工程师</p>
+                            <p class="exper_dsc">
+                                生活圈项目。<br>
+                                SLB项目。<br>
+                            </p>
+                        </li>
+                        <li class="animated fadeInUpBig" style="margin-top:74px;-webkit-animation-delay:0.8s;-moz-animation-delay:0.8s;animation-delay:0.8s;">
+                            <i class="exper_icon"></i>
+                            <p class="exper_time">2015 /6—至今</p>
+                            <p class="exper_cpname">微狐</p>
+                            <p class="exper_name">前端高级工程师</p>
+                            <p class="exper_dsc">
+                                负责以下项目前后端开发:<br>
+                                微狐官网: <a href="http://ivfox.cn" target="_blank">http://ivfox.cn</a><br>
+                                官网后台: <a href="http://ivfox.cn/ivfox_c" target="_blank">http://ivfox.cn/ivfox_c</a><br>
+                                微狐头条: <a href="http://pgc.ivfox.cn" target="_blank">http://pgc.ivfox.cn</a><br>
+                                叫师后台: <a href="http://console.callx.cn" target="_blank">http://console.callx.cn</a><br>
+                                教育者平台: <a href="http://ban.ivfox.cn" target="_blank">http://ban.ivfox.cn</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="section4">
+        <div class="slide" id="slide1" data-anchor="slide1">
+            <div class="p0-content">
+                <h1 class="p1-title">项目经验 </h1>
+            </div>
+        </div>
+        <div class="slide" id="slide2" data-anchor="slide2">
+            <h1>电视商城1.0</h1>
+            <p>
+                基于SSM（spring+springMVC+mybatis）搭建的一套分布式系统，用java rmi实现远程传输,用的oracle数据库。主要负责商品模块和营销模块功能设计，界面设计，文档撰写等方面工作以及后台框架皮肤更换。
+            </p>
+        </div>
+        <div class="slide" id="slide3" data-anchor="slide3">
+            <h1>Slide 3</h1>
+        </div>
+    </div>
+
+    <div class="section" id="section5">
+        <div class="p0-content">
+            <h1 class="p1-title">开源作品 </h1>
+        </div>
+    </div>
+
+    <div class="section" id="section6">
+        <div class="p0-content">
+            <h1 class="p1-title">了解更多</h1>
+        </div>
+    </div>
+</div>
+<script>
+$(function(){
+    loadClock();
+    $('#clockDiv').limitDrag();
+});
+
+</script>
+</body>
+</html>
