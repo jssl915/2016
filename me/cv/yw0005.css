@@ -1,0 +1,40 @@
+/*模板结构*/
+.baseditBar .mobanBar .editBox .otherList li:nth-child(4){display:none;}
+.baseditBar .mobanBar .editBox .otherList li:nth-child(5){display:none;}
+.baseStyle{padding-top:0px;background:#fff;}
+.baseStyle .divLeft{padding: 0;min-height: 230px;background: url(j1_head_bg.png) no-repeat left top;}
+.baseStyle .divRight{padding: 0px;position:relative;z-index:10;float: left;margin: 60px 20px 0;}
+.baseStyle .fbottom_bg{position: absolute;bottom:0px;width:1100px;z-index:1;height:542px;background: url(j1_bottom_bg.png) no-repeat right bottom;}
+
+.msgDiv .icon.resume_focus:after{width:28px;height: 28px;top: 1px;left: -7px;}
+.hobbyicon .icon.resume_focus:after{width: 40px;height:40px;top:15px;left: 20px;}
+.baseItem .icon.resume_focus:after{width: 41px;height: 41px;top: 14px;left: 2px;}
+
+/*头像模块*/
+.baseStyle .headDiv{border: 6px solid #fff;top: 26px;width:150px;height:200px;margin:0 auto;position: absolute;overflow: hidden;right: 55px;}
+.baseStyle .headDiv img{display: block;cursor:pointer;}
+.baseStyle .headDiv .headNotice{position: absolute;cursor:pointer;width: 100%;height: 100%;background-color: rgba(0,0,0,.3);text-align: center;padding-top: 164px;color: rgba(255,255,255,.5); opacity: 0;}
+.baseStyle .headDiv:hover .headNotice{opacity:1;}
+.custDel .cust_delete{left: auto;right: 2px;}
+
+/*基本信息模块*/
+.baseStyle .msgDiv{padding: 0;width: 1040px;margin: 160px 30px 0;height:auto;float: left;border-bottom: 2px dashed #bed6ef !important;}
+.baseStyle .msgDiv .baseMsg{display: inline;height: 31px;line-height: 30px;color: #327EE4;}
+.baseStyle .msgDiv .baseMsg a{display: inline-block;font-size:16px;margin-right:4px;vertical-align: middle;color: #337EE4;height:31px;float: left;padding-top:3px;margin-right: 8px;}
+.baseStyle .msgDiv .baseDel .delete{top:6px;left:-21px;font-size: 16px;padding-left:11px;}
+.baseStyle .msgDiv input{width: 228px;height:31px;float: left;margin-right: 5px;}
+.baseStyle .baseItem{padding-top: 0;}
+.baseStyle .baseItem dl{overflow: visible;}
+/*姓名、求职意向*/
+.baseStyle .nameDiv{display: inline-block;margin: 0px;position:relative;margin-left: 40px;}
+.baseStyle .nameDiv h1{width:100%;text-align: center;color: #FFFFFF;}
+.baseStyle .nameDiv h2{display: none; width:100%;text-align: left;font-weight: lighter;color: #FFFFFF;}
+.baseStyle .nameDiv.positonDiv{padding: 2px 2px;}
+.baseStyle .baseItem dl dt{padding-left: 50px;height: 32px;line-height: 32px;background: url(j1_p_bg.png) no-repeat 8px 0px;}
+.baseStyle .baseItem dl dd{border-left: 3px solid #337FE4 !important;color: #000;margin-left: 14px;padding-right: 10px;padding-left: 21px;padding-bottom: 20px;}
+.baseStyle .baseItem dl dt span{height: 23px;color: #337EE4;line-height: 23px;}
+.baseStyle .baseItem dl dt span div.Border{top: 3px;left: 0px;border-top-width: 4px;border-top-style:solid;width: 54px;border-top-color: #454545;display: none;}
+.baseStyle .baseItem .baseContent{padding-left: 10px;margin: 0px;}
+.baseStyle .baseItem .baseContent .conTitle span{height:33px;color: #337EE4;}
+.baseStyle .baseItem .baseContent .conTitle span.conTitle_company{width: 500px;}
+.baseStyle .baseItem .baseContent .conTitle span.conTitle_post{width: 218px;}
